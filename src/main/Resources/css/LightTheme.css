@@ -1,0 +1,130 @@
+.mainWindow {
+    -fx-background-color: #efeff0
+}
+
+.side {
+    -fx-background-color: #efeff0
+}
+
+.inner {
+    -fx-background-color: #efeff0
+}
+
+.toolbar{
+    -fx-background-color: #efeff0
+}
+
+.buttonHome {
+    -fx-background-color: #efeff0;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonHome:hover {
+    -fx-background-color: #a6a6a6;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonHome:pressed {
+    -fx-background-color: #727272;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonBrowser {
+    -fx-background-color: #efeff0;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonBrowser:hover {
+    -fx-background-color: #a6a6a6;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonBrowser:pressed {
+    -fx-background-color: #727272;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonMessage {
+    -fx-background-color:  #efeff0;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonMessage:hover {
+    -fx-background-color: #a6a6a6;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonMessage:pressed {
+    -fx-background-color: #727272;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonSettings {
+    -fx-background-color:  #efeff0;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonSettings:hover {
+    -fx-background-color: #a6a6a6;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonSettings:pressed {
+    -fx-background-color: #727272;
+    -fx-background-radius: 0 0 0 0;
+}
+
+#closeButton{
+    -fx-background-color: #efeff0;
+    -fx-background-radius: 0 0 0 0;
+}
+#tb{
+    -fx-background-color: #141124;
+    -fx-background-radius: 0 0 0 0;
+}
+
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-border-color: #A868A0;
+    -fx-border-width: 1;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #141124;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #2F2B43;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #A868A0;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #A868A0;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    /* -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; /* 5 2 0 10 */
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overridden as 5 2 0 0 */
+}
+
+

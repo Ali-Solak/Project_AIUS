@@ -1,0 +1,60 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Project_AIUS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Project_AIUS_jar</output-path>
+    <root id="archive" name="Project_AIUS.jar">
+      <element id="module-output" name="Project_AIUS" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/kordamp/ikonli/ikonli-javafx/11.3.5/ikonli-javafx-11.3.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/12/javafx-graphics-12-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/12/javafx-fxml-12-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/kordamp/ikonli/ikonli-core/11.0.2/ikonli-core-11.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/12/javafx-base-12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/kordamp/ikonli/ikonli-entypo-pack/11.3.5/ikonli-entypo-pack-11.3.5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/12/javafx-graphics-12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/12/javafx-base-12-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/hansolo/tilesfx/11.31/tilesfx-11.31.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/kordamp/ikonli/ikonli-elusive-pack/11.0.2/ikonli-elusive-pack-11.0.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/12/javafx-fxml-12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-web/12/javafx-web-12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-media/12/javafx-media-12-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jfoenix/jfoenix/9.0.9/jfoenix-9.0.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/12/javafx-controls-12-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/eu/hansolo/medusa/11.2/Medusa-11.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-web/12/javafx-web-12-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-media/12/javafx-media-12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/12/javafx-controls-12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/github/oshi/oshi-core/5.0.1/oshi-core-5.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: com.github.oshi:oshi-core:5.0.1" />
+      <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1.1" />
+      <element id="library" level="project" name="Maven: com.jfoenix:jfoenix:9.0.9" />
+      <element id="library" level="project" name="Maven: eu.hansolo:Medusa:11.2" />
+      <element id="library" level="project" name="Maven: eu.hansolo:tilesfx:11.31" />
+      <element id="library" level="project" name="Maven: junit:junit:4.10" />
+      <element id="library" level="project" name="Maven: net.java.dev.jna:jna-platform:5.5.0" />
+      <element id="library" level="project" name="Maven: net.java.dev.jna:jna:5.5.0" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-core:11.0.2" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-elusive-pack:11.0.2" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-entypo-pack:11.3.5" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-javafx:11.3.5" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:win:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:12" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:win:12" />
+      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.0-alpha1" />
+      <element id="library" level="application" name="Enzo-0.3.6" />
+      <element id="library" level="application" name="jfoenix-9.0.8" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,97 @@
+.mainWindow {
+    -fx-background-color: #000d1a
+}
+
+.side {
+    -fx-background-color: #131022
+}
+
+.borderPane{
+    -fx-background-color: #000d1a
+}
+
+.inner {
+    -fx-background-color: #131022
+}
+
+.toolbar{
+    -fx-background-color: #141124;
+}
+
+.buttonHome {
+    -fx-background-color: #141124;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.buttonHome:hover {
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 0 0 0 0;
+}
+
+
+.button {
+    -fx-background-color: #141124;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.button:hover {
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 0 0 0 0;
+}
+
+#closeButton{
+    -fx-background-color: #141124;
+    -fx-background-radius: 0 0 0 0;
+}
+#tb{
+    -fx-background-color: #141124;
+    -fx-background-radius: 0 0 0 0;
+}
+
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-border-color: #A868A0;
+    -fx-border-width: 1;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #141124;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #2F2B43;
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #A868A0;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #A868A0;
+}
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em;
+}
+
+.chart-legend-item-symbol{
+    -fx-background-color: #A868A0;
+}
+
