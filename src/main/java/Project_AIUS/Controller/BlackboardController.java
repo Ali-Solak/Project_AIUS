@@ -24,6 +24,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 
+
+/**
+ * Window to leave messages.
+ * Window reads text files. If files are written, the panels with text are set visible.
+ *
+ */
 public class BlackboardController extends BaseController implements Initializable {
 
     private InputOutput inputOutput = new InputOutput();

@@ -12,6 +12,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Takes an ImageView and puts accordingly pictures in place that fit
+ * the status of the internet connection, utilizing a ScheduledExecuter service
+ * to check the connection every ten seconds
+ */
 public class WifiSignalAdder {
 
     private Image image0;

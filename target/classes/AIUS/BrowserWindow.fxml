@@ -10,7 +10,7 @@
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 <?import org.kordamp.ikonli.javafx.StackedFontIcon?>
 
-<BorderPane prefHeight="596.0" prefWidth="878.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1537.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <VBox prefHeight="585.0" prefWidth="81.0" styleClass="side" BorderPane.alignment="CENTER">
          <children>
@@ -49,15 +49,6 @@
                   <StackedFontIcon>
                      <children>
                         <FontIcon iconColor="#a868a0" iconLiteral="enty-line-graph" iconSize="20" />
-                     </children>
-                  </StackedFontIcon>
-               </graphic>
-            </JFXButton>
-            <JFXButton fx:id="settings" contentDisplay="TOP" prefHeight="62.0" prefWidth="98.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="Power Off" textFill="#a868a0" translateY="150.0">
-               <graphic>
-                  <StackedFontIcon>
-                     <children>
-                        <FontIcon iconColor="#a868a0" iconLiteral="eli-off" iconSize="20" />
                      </children>
                   </StackedFontIcon>
                </graphic>

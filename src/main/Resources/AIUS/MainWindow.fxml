@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
-<?import org.kordamp.ikonli.javafx.StackedFontIcon?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.kordamp.ikonli.javafx.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="borderPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" styleClass="borderPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <VBox prefHeight="1080.0" prefWidth="81.0" styleClass="side" BorderPane.alignment="CENTER">
          <children>
@@ -55,15 +51,6 @@
                   </StackedFontIcon>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="settings" contentDisplay="TOP" prefHeight="62.0" prefWidth="86.0" text="Power Off" textFill="#a868a0" translateY="150.0">
-               <graphic>
-                  <StackedFontIcon>
-                     <children>
-                        <FontIcon iconColor="#a868a0" iconLiteral="eli-off" iconSize="20" />
-                     </children>
-                  </StackedFontIcon>
-               </graphic>
-            </JFXButton>
          </children>
          <effect>
             <DropShadow blurType="GAUSSIAN" radius="4.75" width="0.0" />
@@ -73,14 +60,14 @@
    <center>
       <AnchorPane fx:id="mainWindow" layoutX="441.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1030.0" prefWidth="1510.0" styleClass="mainWindow" stylesheets="@../css/DarkTheme.css" BorderPane.alignment="CENTER">
          <children>
-            <ImageView id="image" fx:id="image" fitHeight="693.0" fitWidth="975.0" layoutX="67.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="image" fx:id="image" fitHeight="693.0" fitWidth="975.0" layoutX="75.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/satellite.jpg" />
                </image>
             </ImageView>
-            <Label fx:id="titel" layoutX="360.0" layoutY="-28.0" prefHeight="83.0" prefWidth="464.0" text="World Wide Bukalagi" textFill="#a868a0" textOverrun="WORD_ELLIPSIS">
+            <Label fx:id="titel" layoutX="326.0" layoutY="-28.0" prefHeight="83.0" prefWidth="464.0" text="World Wide Bukalagi" textFill="#a868a0" textOverrun="WORD_ELLIPSIS">
                <font>
-                  <Font name="Gill Sans MT Condensed" size="60.0" />
+                  <Font name="Microsoft Sans Serif" size="48.0" />
                </font>
             </Label>
             <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" layoutX="740.0" pickOnBounds="true" preserveRatio="true" />

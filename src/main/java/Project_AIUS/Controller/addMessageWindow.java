@@ -12,7 +12,10 @@ import javafx.scene.control.TextArea;
 
 import java.net.URL;
 import java.util.*;
-
+/**
+ * Window to add Messages
+ *
+ */
 public class addMessageWindow extends BaseController implements Initializable {
 
     private InputOutput inputOutput = new InputOutput();
@@ -37,6 +40,10 @@ public class addMessageWindow extends BaseController implements Initializable {
 
     }
 
+    /**
+     * Checks if there is an empty message field.
+     * If there an available field is found, it will be written, otherwise a warning label pops up.
+     */
     public void setupAddButton() {
 
         if (messageAvailable(1)) {

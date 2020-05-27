@@ -88,6 +88,9 @@ public class SatelliteDataWindow extends BaseController implements Initializable
         ajustData();
     }
 
+    /**
+     * Uses ScheduledExecuter to periodically check data and update Charts.
+     */
     public void ajustData(){
 
         final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
@@ -173,6 +176,7 @@ public class SatelliteDataWindow extends BaseController implements Initializable
         smoothChartTile.setLayoutX(300);
         smoothChartTile.setLayoutY(360);
 
+        /*
         radarChart = TileBuilder.create().skinType(Tile.SkinType.RADAR_CHART)
                 .prefSize(800, 400)
                 .minValue(1)
@@ -206,6 +210,8 @@ public class SatelliteDataWindow extends BaseController implements Initializable
 
         radarChart.setLayoutX(300);
         radarChart.setLayoutY(360);
+
+         */
 
         mainWindow.getChildren().addAll(gaugeTile,smoothChartTile);
     }

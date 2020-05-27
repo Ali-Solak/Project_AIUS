@@ -9,6 +9,9 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
+/**
+ * Uses oshi Core Libary to get data from the network adapter and read the internet speed.
+ */
 public class InternetSpeedData {
 
     private SystemInfo si;

@@ -32,6 +32,10 @@ import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
+
+/**
+ * Window utilises Javafx webview to create a Browser
+ */
 public class BrowserWindow extends BaseController implements Initializable {
 
     @FXML private JFXButton home;
@@ -79,6 +83,10 @@ public class BrowserWindow extends BaseController implements Initializable {
         });
     }
 
+    /**
+     * A tab is created with an attached listener, if a the tab(plus button) is pressed
+     * a new tab is created together with all neccesary elements (buttons, webview etc)
+     */
     public void setUpTabs() {
         setupFirstTab();
 
@@ -120,6 +128,9 @@ public class BrowserWindow extends BaseController implements Initializable {
 
                     tab.setText("new Tab");
                     BorderPane bp = new BorderPane();
+
+                    bp.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
+
                     bp.setTop(hBox);
 
                     bp.setCenter(setupWebServices(tab,forward,back,search,refresh,google,searchField,loading));
@@ -224,6 +235,14 @@ public class BrowserWindow extends BaseController implements Initializable {
         return button;
     }
 
+    /**
+     *
+     * @param webEngine
+     * @param loading
+     *
+     * Uses Listener to check worker state of the webengine.
+     * Shows a loading symbol if something is being loaded.
+     */
     private void loading(WebEngine webEngine, JFXSpinner loading) {
 
         loading.progressProperty().bind(webEngine.getLoadWorker().progressProperty());
@@ -235,9 +254,21 @@ public class BrowserWindow extends BaseController implements Initializable {
 
                             loading.setVisible(false);
                         }
+                        if(newState  == Worker.State.RUNNING){
+                            loading.setVisible(true);
+                        }
                     }
                 });
     }
+
+    /**
+     *
+     * @param webEngine
+     * @param searchField
+     *
+     *  Ajusts the search field in the browser with the current used websites link
+     *
+     */
     private void ajustSearchField(WebEngine webEngine, TextField searchField){
         webEngine.locationProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -256,6 +287,20 @@ public class BrowserWindow extends BaseController implements Initializable {
         });
     }
 
+    /**
+     *
+     * @param tab
+     * @param forward
+     * @param back
+     * @param search
+     * @param refresh
+     * @param google
+     * @param searchField
+     * @param loading
+     * @return Webview
+     *
+     * Sets up all necessary services for the Webview.
+     */
     private WebView setupWebServices(Tab tab, JFXButton forward, JFXButton back, JFXButton search, JFXButton refresh, JFXButton google, TextField searchField, JFXSpinner loading){
         final WebEngine engine;
         WebView webView = new WebView();

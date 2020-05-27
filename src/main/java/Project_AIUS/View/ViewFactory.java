@@ -1,9 +1,12 @@
 package  Project_AIUS.View;
 
 import  Project_AIUS.Controller.*;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -75,9 +78,8 @@ public class ViewFactory {
         updateStyle(scene);
         stage.setScene(scene);
 
-        stage.hide();
+        //stage.hide();
         stage.setMaximized(true);
-
         stage.show();
     }
 
