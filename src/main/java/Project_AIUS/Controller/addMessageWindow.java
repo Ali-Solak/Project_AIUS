@@ -9,8 +9,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.HBox;
 
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 /**
  * Window to add Messages
@@ -27,99 +32,44 @@ public class addMessageWindow extends BaseController implements Initializable {
     @FXML
     private TextArea textField;
 
-    public addMessageWindow(List<Integer> messageCounter, ViewFactory viewFactory, String fxml) {
+    public addMessageWindow(ViewFactory viewFactory, String fxml) {
         super(viewFactory, fxml);
         this.messageCounter = messageCounter;
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setupAddButton();
+        add.setOnAction(Event -> createMessage());
         warning.setVisible(false);
-        System.out.println(messageCounter);
-
     }
 
     /**
-     * Checks if there is an empty message field.
-     * If there an available field is found, it will be written, otherwise a warning label pops up.
+     * Creates a textfile. Using String.format iterating name, until it's possible to create file
+     * if already exists
+     *
      */
-    public void setupAddButton() {
-
-        if (messageAvailable(1)) {
-            add.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    inputOutput.writeFile(textField.getText(), "C://AIUS/m1.txt");
-                    viewFactory.openBlackboardWindow();
-                }
-            });
-        }
-        if (messageAvailable(2)) {
-            add.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    inputOutput.writeFile(textField.getText(), "C://AIUS/m2.txt");
-                    viewFactory.openBlackboardWindow();
-                }
-            });
-        }
-        if (messageAvailable(3)) {
-            add.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    inputOutput.writeFile(textField.getText(), "C://AIUS/m3.txt");
-                    viewFactory.openBlackboardWindow();
-                }
-            });
-        }
-        if (messageAvailable(4)) {
-            add.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    inputOutput.writeFile(textField.getText(), "C://AIUS/m4.txt");
-                    viewFactory.openBlackboardWindow();
-                }
-            });
-        }
-        if (messageAvailable(5)) {
-            add.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    inputOutput.writeFile(textField.getText(), "C://AIUS/m5.txt");
-                    viewFactory.openBlackboardWindow();
-                }
-            });
-        }
-        if (messageAvailable(6)) {
-            add.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    inputOutput.writeFile(textField.getText(), "C://AIUS/m6.txt");
-                    viewFactory.openBlackboardWindow();
-                }
-            });
-        }
-        if(!messageAvailable(1) &&
-                !messageAvailable(2) &&
-                !messageAvailable(3) &&
-                !messageAvailable(4) &&
-                !messageAvailable(5) &&
-                !messageAvailable(6)){
-            warning.setVisible(true);
-        }
-
-    }
-
-    public boolean messageAvailable(int messageNumber) {
-
-        for (int message : messageCounter) {
-            if (message == messageNumber) {
-                System.out.println(message);
-                System.out.println(messageNumber);
-                return false;
+    public void createMessage() {
+        int counter = 0;
+        boolean running = true;
+        String filenname = null;
+        while (running && counter < 100) {
+            try {
+                filenname = String.format("%s-%03d", "message", counter);
+                Files.createFile(Paths.get("Messages/"+filenname+".txt")); //String format = concat, falls bereits existiert
+                running = false;                                                     //Solange probieren bis funktioniert
+            } catch (FileAlreadyExistsException e) {
+                System.out.println("Datei bereits vorhanden, zähle auto hoch");
+                counter++;
+            } catch (IOException e) {
+                e.getStackTrace();
+                System.err.println("Fehler beim Dateizugriff");
+            } catch (Exception e) {
+                System.err.println("Fehler mit der Datei");
+                running = false;
             }
         }
-        return true;
+        inputOutput.writeFile(textField.getText(),"Messages/"+filenname+".txt");
+        viewFactory.openBlackboardWindow();
     }
+
 }

@@ -41,8 +41,8 @@ public class ViewFactory {
         BaseController browserWindow = new BlackboardController(this, "/AIUS/BlackboardWindow.fxml");
         initializeWindow(browserWindow);
     }
-    public void openAddStage(List<Integer> messageCounter){
-        BaseController addWindow = new addMessageWindow(messageCounter,this,"/AIUS/addMessageWindow.fxml");
+    public void openAddStage(){
+        BaseController addWindow = new addMessageWindow(this,"/AIUS/addMessageWindow.fxml");
         initializeStage(addWindow);
     }
 
@@ -78,7 +78,7 @@ public class ViewFactory {
         updateStyle(scene);
         stage.setScene(scene);
 
-        //stage.hide();
+        stage.hide();
         stage.setMaximized(true);
         stage.show();
     }

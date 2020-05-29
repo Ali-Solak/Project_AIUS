@@ -12,22 +12,6 @@ import java.util.ArrayList;
 public class InputOutput {
 
     public InputOutput() {
-        try {
-            File directory = new File("C://AIUS");
-            if (! directory.exists()){
-                directory.mkdir();
-            }
-
-            Files.createFile(Paths.get("C://AIUS/m1.txt"));
-            Files.createFile(Paths.get("C://AIUS/m2.txt"));
-            Files.createFile(Paths.get("C://AIUS/m3.txt"));
-            Files.createFile(Paths.get("C://AIUS/m4.txt"));
-            Files.createFile(Paths.get("C://AIUS/m5.txt"));
-            Files.createFile(Paths.get("C://AIUS/m6.txt"));
-        }
-        catch(Exception e){
-            e.getMessage();
-        }
     }
 
 

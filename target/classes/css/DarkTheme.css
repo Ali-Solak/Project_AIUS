@@ -6,15 +6,29 @@
     -fx-background-color: #131022
 }
 
-.borderPane{
+.borderPane {
     -fx-background-color: #000d1a
+}
+
+.pane {
+    -fx-border-width: 1;
+    -fx-border-color: #a868a0;
+}
+
+.hbox{
+    -fx-border-width: 1;
+    -fx-border-color: #a868a0;
+}
+
+.textField{
+    -fx-text-fill: #a868a0;
 }
 
 .inner {
     -fx-background-color: #131022
 }
 
-.toolbar{
+.toolbar {
     -fx-background-color: #141124;
 }
 
@@ -39,11 +53,12 @@
     -fx-background-radius: 0 0 0 0;
 }
 
-#closeButton{
+#closeButton {
     -fx-background-color: #141124;
     -fx-background-radius: 0 0 0 0;
 }
-#tb{
+
+#tb {
     -fx-background-color: #141124;
     -fx-background-radius: 0 0 0 0;
 }
@@ -53,24 +68,22 @@
     -fx-opacity: 0;
 }
 
-.tab-pane
-{
-    -fx-tab-min-width:90px;
+.tab-pane {
+    -fx-tab-min-width: 90px;
 }
 
-.tab{
-    -fx-background-insets: 0 1 0 1,0,0;
+.tab {
+    -fx-background-insets: 0 1 0 1, 0, 0;
     -fx-border-color: #A868A0;
     -fx-border-width: 1;
 }
-.tab-pane .tab
-{
+
+.tab-pane .tab {
     -fx-background-color: #141124;
 
 }
 
-.tab-pane .tab:selected
-{
+.tab-pane .tab:selected {
     -fx-background-color: #2F2B43;
 }
 
@@ -91,7 +104,36 @@
     -fx-padding: 0.416667em 0.166667em 0.0em 0.0em;
 }
 
-.chart-legend-item-symbol{
+.chart-legend-item-symbol {
     -fx-background-color: #A868A0;
 }
 
+.scroll-pane {
+    -fx-background-color: #141124;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #A868A0;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #141124;
+}

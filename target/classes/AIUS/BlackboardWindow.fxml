@@ -9,190 +9,78 @@
 <?import org.kordamp.ikonli.javafx.*?>
 
 <BorderPane styleClass="borderPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
-   <left>
-      <VBox prefHeight="62.0" prefWidth="81.0" styleClass="side" stylesheets="@../../../resources/CSS/DarkTheme.css" BorderPane.alignment="CENTER">
-         <children>
-            <JFXButton fx:id="home" contentDisplay="TOP" prefHeight="62.0" prefWidth="86.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="Home" textFill="#a868a0" translateY="30.0">
-               <graphic>
-                  <StackedFontIcon>
-                     <children>
-                        <FontIcon iconColor="#a868a0" iconLiteral="eli-home" iconSize="20" text="" />
-                     </children>
-                  </StackedFontIcon>
-               </graphic>
-               <font>
-                  <Font name="Arial" size="12.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="browser" contentDisplay="TOP" prefHeight="62.0" prefWidth="111.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="Browser" textFill="#a868a0" translateY="60.0">
-               <graphic>
-                  <StackedFontIcon>
-                     <children>
-                        <FontIcon iconColor="#a868a0" iconLiteral="eli-globe" iconSize="20" />
-                     </children>
-                  </StackedFontIcon>
-               </graphic>
-            </JFXButton>
-            <JFXButton fx:id="message" contentDisplay="TOP" prefHeight="62.0" prefWidth="118.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="M-Board" textFill="#a868a0" translateY="90.0">
-               <graphic>
-                  <StackedFontIcon>
-                     <children>
-                        <FontIcon iconColor="#a868a0" iconLiteral="enty-message" iconSize="20" />
-                     </children>
-                  </StackedFontIcon>
-               </graphic>
-            </JFXButton>
-            <JFXButton fx:id="satellite" contentDisplay="TOP" prefHeight="62.0" prefWidth="126.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="S-Data" textFill="#a868a0" translateY="120.0">
-               <graphic>
-                  <StackedFontIcon>
-                     <children>
-                        <FontIcon iconColor="#a868a0" iconLiteral="enty-line-graph" iconSize="20" text="" />
-                     </children>
-                  </StackedFontIcon>
-               </graphic>
-            </JFXButton>
-         </children>
-         <effect>
-            <DropShadow blurType="GAUSSIAN" radius="4.75" width="0.0" />
-         </effect>
-      </VBox>
-   </left>
-   <center>
-      <AnchorPane fx:id="mainWindow" layoutX="441.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1030.0" prefWidth="1510.0" styleClass="mainWindow" stylesheets="@../css/DarkTheme.css" BorderPane.alignment="CENTER">
-         <children>
-            <Label fx:id="titel" layoutX="642.0" layoutY="23.0" prefHeight="72.0" prefWidth="264.0" text="Message Board" textFill="#a868a0" textOverrun="WORD_ELLIPSIS">
-               <font>
-                  <Font name="Microsoft Sans Serif" size="36.0" />
-               </font>
-            </Label>
-            <Pane fx:id="pane" layoutX="229.0" layoutY="122.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-               <children>
-                  <HBox prefHeight="41.0" prefWidth="299.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-                     <children>
-                        <Button fx:id="close" mnemonicParsing="false" styleClass="button" stylesheets="@../css/DarkTheme.css">
-                           <graphic>
-                              <StackedFontIcon>
-                                 <children>
-                                    <FontIcon iconColor="#a868a0" iconLiteral="eli-remove-circle" iconSize="20" selectionFill="#a868a0" />
-                                 </children>
-                              </StackedFontIcon>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="1.0" layoutY="273.0" prefHeight="27.0" prefWidth="298.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;" />
-                  <Label fx:id="textField" alignment="TOP_LEFT" layoutX="2.0" layoutY="41.0" prefHeight="231.0" prefWidth="298.0" textFill="#a868a0" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
-               </children>
-            </Pane>
-            <Pane fx:id="pane1" layoutX="627.0" layoutY="122.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-               <children>
-                  <HBox prefHeight="41.0" prefWidth="299.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-                     <children>
-                        <Button fx:id="close1" mnemonicParsing="false" styleClass="button" stylesheets="@../css/DarkTheme.css">
-                           <graphic>
-                              <StackedFontIcon>
-                                 <children>
-                                    <FontIcon iconColor="#a868a0" iconLiteral="eli-remove-circle" iconSize="20" selectionFill="#a868a0" />
-                                 </children>
-                              </StackedFontIcon>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutY="273.0" prefHeight="27.0" prefWidth="299.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;" />
-                  <Label fx:id="textField1" alignment="TOP_LEFT" layoutX="1.0" layoutY="41.0" prefHeight="231.0" prefWidth="298.0" textFill="#a868a0" textOverrun="CENTER_ELLIPSIS" />
-               </children>
-            </Pane>
-            <Pane fx:id="pane2" layoutX="1033.0" layoutY="122.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-               <children>
-                  <HBox prefHeight="41.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-                     <children>
-                        <Button fx:id="close2" mnemonicParsing="false" styleClass="button" stylesheets="@../css/DarkTheme.css">
-                           <graphic>
-                              <StackedFontIcon>
-                                 <children>
-                                    <FontIcon iconColor="#a868a0" iconLiteral="eli-remove-circle" iconSize="20" selectionFill="#a868a0" />
-                                 </children>
-                              </StackedFontIcon>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutY="273.0" prefHeight="27.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;" />
-                  <Label fx:id="textField2" alignment="TOP_LEFT" layoutX="1.0" layoutY="41.0" prefHeight="233.0" prefWidth="298.0" textFill="#a868a0" textOverrun="CENTER_ELLIPSIS" />
-               </children>
-            </Pane>
-            <Pane fx:id="pane3" layoutX="226.0" layoutY="476.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-               <children>
-                  <HBox prefHeight="41.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-                     <children>
-                        <Button fx:id="close3" mnemonicParsing="false" styleClass="button" stylesheets="@../css/DarkTheme.css">
-                           <graphic>
-                              <StackedFontIcon>
-                                 <children>
-                                    <FontIcon iconColor="#a868a0" iconLiteral="eli-remove-circle" iconSize="20" selectionFill="#a868a0" />
-                                 </children>
-                              </StackedFontIcon>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutY="271.0" prefHeight="28.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;" />
-                  <Label fx:id="textField3" alignment="TOP_LEFT" layoutX="1.0" layoutY="41.0" prefHeight="231.0" prefWidth="299.0" textFill="#a868a0" textOverrun="CENTER_ELLIPSIS" />
-               </children>
-            </Pane>
-            <Pane fx:id="pane4" layoutX="624.0" layoutY="476.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-               <children>
-                  <HBox prefHeight="41.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-                     <children>
-                        <Button fx:id="close4" mnemonicParsing="false" styleClass="button" stylesheets="@../css/DarkTheme.css">
-                           <graphic>
-                              <StackedFontIcon>
-                                 <children>
-                                    <FontIcon iconColor="#a868a0" iconLiteral="eli-remove-circle" iconSize="20" selectionFill="#a868a0" />
-                                 </children>
-                              </StackedFontIcon>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="1.0" layoutY="272.0" prefHeight="27.0" prefWidth="298.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;" />
-                  <Label fx:id="textField4" alignment="TOP_LEFT" layoutY="41.0" prefHeight="232.0" prefWidth="299.0" textFill="#a868a0" textOverrun="CENTER_ELLIPSIS" />
-               </children>
-            </Pane>
-            <Pane fx:id="pane5" layoutX="1030.0" layoutY="476.0" prefHeight="300.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-               <children>
-                  <HBox prefHeight="41.0" prefWidth="299.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;">
-                     <children>
-                        <Button fx:id="close5" mnemonicParsing="false" styleClass="button" stylesheets="@../css/DarkTheme.css">
-                           <graphic>
-                              <StackedFontIcon>
-                                 <children>
-                                    <FontIcon iconColor="#a868a0" iconLiteral="eli-remove-circle" iconSize="20" selectionFill="#a868a0" />
-                                 </children>
-                              </StackedFontIcon>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <HBox layoutX="1.0" layoutY="272.0" prefHeight="27.0" prefWidth="298.0" style="-fx-border-width: 1; -fx-border-color: #a868a0;" />
-                  <Label fx:id="textField5" alignment="TOP_LEFT" layoutX="2.0" layoutY="41.0" prefHeight="232.0" prefWidth="299.0" textFill="#a868a0" textOverrun="CENTER_ELLIPSIS" />
-               </children>
-            </Pane>
-            <Button fx:id="add" layoutX="81.0" layoutY="35.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="203.0" styleClass="button" stylesheets="@../css/DarkTheme.css" text=" Add new message" textFill="#a868a0">
-               <graphic>
-                  <StackedFontIcon>
-                     <children>
-                        <FontIcon iconColor="#a868a0" iconLiteral="eli-plus" iconSize="22" text="" />
-                     </children>
-                  </StackedFontIcon>
-               </graphic>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-            <ImageView fx:id="imageView" fitHeight="35.0" fitWidth="35.0" layoutX="740.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </AnchorPane>
-   </center>
+    <left>
+        <VBox prefHeight="62.0" prefWidth="81.0" styleClass="side" stylesheets="@../../../resources/CSS/DarkTheme.css" BorderPane.alignment="CENTER">
+            <children>
+                <JFXButton fx:id="home" contentDisplay="TOP" prefHeight="62.0" prefWidth="86.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="Home" textFill="#a868a0" translateY="30.0">
+                    <graphic>
+                        <StackedFontIcon>
+                            <children>
+                                <FontIcon iconColor="#a868a0" iconLiteral="eli-home" iconSize="20" text="" />
+                            </children>
+                        </StackedFontIcon>
+                    </graphic>
+                    <font>
+                        <Font name="Arial" size="12.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="browser" contentDisplay="TOP" prefHeight="62.0" prefWidth="111.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="Browser" textFill="#a868a0" translateY="60.0">
+                    <graphic>
+                        <StackedFontIcon>
+                            <children>
+                                <FontIcon iconColor="#a868a0" iconLiteral="eli-globe" iconSize="20" />
+                            </children>
+                        </StackedFontIcon>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="message" contentDisplay="TOP" prefHeight="62.0" prefWidth="118.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="M-Board" textFill="#a868a0" translateY="90.0">
+                    <graphic>
+                        <StackedFontIcon>
+                            <children>
+                                <FontIcon iconColor="#a868a0" iconLiteral="enty-message" iconSize="20" />
+                            </children>
+                        </StackedFontIcon>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="satellite" contentDisplay="TOP" prefHeight="62.0" prefWidth="126.0" stylesheets="@../../../resources/CSS/DarkTheme.css" text="S-Data" textFill="#a868a0" translateY="120.0">
+                    <graphic>
+                        <StackedFontIcon>
+                            <children>
+                                <FontIcon iconColor="#a868a0" iconLiteral="enty-line-graph" iconSize="20" text="" />
+                            </children>
+                        </StackedFontIcon>
+                    </graphic>
+                </JFXButton>
+            </children>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" radius="4.75" width="0.0" />
+            </effect>
+        </VBox>
+    </left>
+    <center>
+        <ScrollPane fx:id="scroll" style="-fx-border-color: #000d1a; -fx-background-color: #000d1a;" styleClass="edge-to-edge" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+            <AnchorPane fx:id="mainWindow"  style="-fx-background-color: #000d1a;" styleClass="mainWindow" stylesheets="@../css/DarkTheme.css" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+                <children>
+                    <Label fx:id="titel" layoutX="642.0" layoutY="23.0" prefHeight="72.0" prefWidth="264.0" text="Message Board" textFill="#a868a0" textOverrun="WORD_ELLIPSIS">
+                        <font>
+                            <Font name="Microsoft Sans Serif" size="36.0" />
+                        </font>
+                    </Label>
+                    <Button fx:id="add" layoutX="81.0" layoutY="35.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="203.0" styleClass="button" stylesheets="@../css/DarkTheme.css" text=" Add new message" textFill="#a868a0">
+                        <graphic>
+                            <StackedFontIcon>
+                                <children>
+                                    <FontIcon iconColor="#a868a0" iconLiteral="eli-plus" iconSize="22" text="" />
+                                </children>
+                            </StackedFontIcon>
+                        </graphic>
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Button>
+                    <ImageView fx:id="imageView" fitHeight="35.0" fitWidth="35.0" layoutX="740.0" pickOnBounds="true" preserveRatio="true" />
+                </children>
+            </AnchorPane>
+        </ScrollPane>
+    </center>
 </BorderPane>
