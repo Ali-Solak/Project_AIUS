@@ -5,7 +5,10 @@ import oshi.hardware.HardwareAbstractionLayer;
 import oshi.hardware.NetworkIF;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
@@ -35,11 +38,10 @@ public class InternetSpeedData {
 
     }
 
-    public long readInternetSpeed() {
+    public long readInternetSpeed(NetworkIF net) {
 
         long download1 = net.getBytesRecv();
         long timestamp1 = net.getTimeStamp();
-        //System.out.println(net.getNetworkInterface());
         try {
             ReadableByteChannel rbc = Channels.newChannel(url.openStream());
             FileOutputStream fos = new FileOutputStream("downExample.txt");
@@ -49,12 +51,28 @@ public class InternetSpeedData {
 
         }
 
-       // net.updateNetworkStats(); //Updating network stats
-        
+        //Updating network stats
         net.updateAttributes();
+
         long download2 = net.getBytesRecv();
         long timestamp2 = net.getTimeStamp();
 
         return  (download2 - download1)/(timestamp2 - timestamp1);
+    }
+
+    /**
+     * Checks all Network Adapters
+     */
+    public void getWorkingNetworkAdapter(){
+
+        for(NetworkIF network :networks){
+            if(readInternetSpeed(network)>0){
+                net = network;
+            }
+        }
+    }
+
+    public NetworkIF getNet() {
+        return net;
     }
 }

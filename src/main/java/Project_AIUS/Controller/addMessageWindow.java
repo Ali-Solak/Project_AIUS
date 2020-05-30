@@ -45,7 +45,7 @@ public class addMessageWindow extends BaseController implements Initializable {
 
     /**
      * Creates a textfile. Using String.format iterating name, until it's possible to create file
-     * if already exists
+     * if already exists and then writes file
      *
      */
     public void createMessage() {

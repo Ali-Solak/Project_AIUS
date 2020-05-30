@@ -13,6 +13,9 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * ViewFactory to switch between Scenes and put CSS files on Scenes
+ */
 public class ViewFactory {
 
 
@@ -78,7 +81,11 @@ public class ViewFactory {
         updateStyle(scene);
         stage.setScene(scene);
 
-        stage.hide();
+        //stage.hide();
+        //stage.setFullScreen(true);
+        //stage.setFullScreenExitHint("");
+
+
         stage.setMaximized(true);
         stage.show();
     }

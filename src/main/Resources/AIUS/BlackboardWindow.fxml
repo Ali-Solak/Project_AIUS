@@ -8,7 +8,7 @@
 <?import javafx.scene.text.*?>
 <?import org.kordamp.ikonli.javafx.*?>
 
-<BorderPane styleClass="borderPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane styleClass="borderPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"  maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
     <left>
         <VBox prefHeight="62.0" prefWidth="81.0" styleClass="side" stylesheets="@../../../resources/CSS/DarkTheme.css" BorderPane.alignment="CENTER">
             <children>
@@ -59,7 +59,7 @@
     </left>
     <center>
         <ScrollPane fx:id="scroll" style="-fx-border-color: #000d1a; -fx-background-color: #000d1a;" styleClass="edge-to-edge" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
-            <AnchorPane fx:id="mainWindow"  style="-fx-background-color: #000d1a;" styleClass="mainWindow" stylesheets="@../css/DarkTheme.css" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+            <AnchorPane fx:id="mainWindow"  style="-fx-background-color: #000d1a;" styleClass="mainWindow" stylesheets="@../css/DarkTheme.css" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="10000.0" prefWidth="1920.0">
                 <children>
                     <Label fx:id="titel" layoutX="642.0" layoutY="23.0" prefHeight="72.0" prefWidth="264.0" text="Message Board" textFill="#a868a0" textOverrun="WORD_ELLIPSIS">
                         <font>

@@ -98,9 +98,8 @@ public class SatelliteDataWindow extends BaseController implements Initializable
 
 
         scheduledExecutorService.scheduleAtFixedRate(() -> {
-            long data = internetSpeedData.readInternetSpeed();
+            long data = internetSpeedData.readInternetSpeed(internetSpeedData.getNet());
 
-            // Update the chart
             Platform.runLater(() -> {
 
                 Date now = new Date();

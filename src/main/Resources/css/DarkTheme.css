@@ -32,20 +32,12 @@
     -fx-background-color: #141124;
 }
 
-.buttonHome {
-    -fx-background-color: #141124;
-    -fx-background-radius: 0 0 0 0;
-}
-
-.buttonHome:hover {
-    -fx-background-color: #524A7B;
-    -fx-background-radius: 0 0 0 0;
-}
-
 
 .button {
     -fx-background-color: #141124;
     -fx-background-radius: 0 0 0 0;
+
+    -fx-focus-traversable: false;
 }
 
 .button:hover {
@@ -53,10 +45,12 @@
     -fx-background-radius: 0 0 0 0;
 }
 
-#closeButton {
-    -fx-background-color: #141124;
+.button:selected:focused{
+    -fx-background-color: #524A7B;
     -fx-background-radius: 0 0 0 0;
 }
+
+
 
 #tb {
     -fx-background-color: #141124;

@@ -7,9 +7,11 @@ import Project_AIUS.Service.WifiSignalAdder;
 import Project_AIUS.View.ViewFactory;
 import com.jfoenix.controls.JFXButton;
 import eu.hansolo.tilesfx.Tile;
+import javafx.collections.ListChangeListener;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.OverrunStyle;
@@ -17,6 +19,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -34,7 +37,7 @@ import java.util.*;
 
 /**
  * Window to leave messages.
- * Window reads text files. If files are written, the panels with text are set visible.
+ * Window reads text files. If files are written, the panels with text are created
  */
 public class BlackboardController extends BaseController implements Initializable {
 
@@ -144,6 +147,12 @@ public class BlackboardController extends BaseController implements Initializabl
         }
     }
 
+    /**
+     * Creates Message-Panes with labels and close buttons
+     * @param file
+     * @param x
+     * @param y
+     */
     public void setupMessagePane(File file, double x, double y) {
         final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("d.MM.yyyy HH:mm");
         Long now = file.lastModified();
@@ -192,6 +201,7 @@ public class BlackboardController extends BaseController implements Initializabl
 
         pane.setLayoutX(x);
         pane.setLayoutY(y);
+
         mainWindow.getChildren().addAll(pane);
     }
 
