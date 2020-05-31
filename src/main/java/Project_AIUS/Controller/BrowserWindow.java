@@ -8,6 +8,7 @@ import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Worker;
 import javafx.event.Event;
@@ -28,6 +29,7 @@ import org.kordamp.ikonli.javafx.FontIcon;
 import org.kordamp.ikonli.javafx.StackedFontIcon;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
@@ -61,13 +63,17 @@ public class BrowserWindow extends BaseController implements Initializable {
         message.setOnAction(Event -> openMessage());
         satellite.setOnAction(Event -> openSatData());
         setUpTabs();
-
     }
 
     @FXML
     public void search(WebEngine engine, TextField searchField) {
         searchInput = searchField.getText();
-        engine.load(htLink + searchInput);
+        if(searchField.getText().contains("https:")){
+            engine.load(searchInput);
+        }
+        else {
+            engine.load(htLink + searchInput);
+        }
 
     }
 
@@ -115,13 +121,15 @@ public class BrowserWindow extends BaseController implements Initializable {
                     JFXButton back = new JFXButton();
                     JFXButton refresh = new JFXButton();
                     JFXSpinner loading = new JFXSpinner();
+                    ComboBox<String> history = new ComboBox<>();
+                    history.setPromptText("History");
                     searchField.setText("https://www.google.com");
 
                     loading.setPrefSize(19,25);
                     HBox hBox = new HBox(5);
                     hBox.getChildren().setAll(setupButton(back,"enty-arrow-with-circle-left"),setupButton(forward,"enty-arrow-with-circle-right"),loading,
                             setupButton(refresh,"eli-refresh"), setupButton(google,"eli-home-alt"),setupButton(search,"eli-search"),
-                            searchField,imageView);
+                            searchField,history,imageView);
                     HBox.setHgrow(searchField, Priority.ALWAYS);
                     forward.setTranslateX(-13);
 
@@ -133,7 +141,7 @@ public class BrowserWindow extends BaseController implements Initializable {
 
                     bp.setTop(hBox);
 
-                    bp.setCenter(setupWebServices(tab,forward,back,search,refresh,google,searchField,loading));
+                    bp.setCenter(setupWebServices(tab,forward,back,search,refresh,google,searchField,loading,history));
                     tab.setContent(bp);
 
                     final ObservableList<Tab> tabs = tb.getTabs();
@@ -173,22 +181,24 @@ public class BrowserWindow extends BaseController implements Initializable {
         JFXButton back = new JFXButton();
         JFXButton refresh = new JFXButton();
         JFXSpinner loading = new JFXSpinner();
+        ComboBox<String> history = new ComboBox<>();
+        history.setPromptText("History");
         searchField.setText("https://www.google.com");
 
         loading.setPrefSize(19,25);
         HBox hBox = new HBox(5);
         hBox.getChildren().setAll(setupButton(back,"enty-arrow-with-circle-left"),setupButton(forward,"enty-arrow-with-circle-right"),loading,
                 setupButton(refresh,"eli-refresh"), setupButton(google,"eli-home-alt"),setupButton(search,"eli-search"),
-                searchField,imageView);
+                searchField,history,imageView);
         HBox.setHgrow(searchField, Priority.ALWAYS);
         forward.setTranslateX(-13);
 
-        bp.setCenter(setupWebServices(firstTab,forward,back,search,refresh,google,searchField,loading));
+        bp.setCenter(setupWebServices(firstTab,forward,back,search,refresh,google,searchField,loading,history));
         bp.setTop(hBox);
 
         firstTab.setContent(bp);
 
-        firstTab.setText("start");
+        firstTab.setText("Start");
         firstTab.setClosable(true);
         tb.getTabs().addAll(firstTab);
         firstTab.setGraphic(closeButton(firstTab));
@@ -282,9 +292,32 @@ public class BrowserWindow extends BaseController implements Initializable {
         webEngine.locationProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                tab.setText(newValue.substring(12,18));
+                if(newValue.contains("www")) {
+                    tab.setText(newValue.substring(12, 18));
+                }
+                else{
+                    tab.setText(newValue.substring(8, 18));
+                }
             }
         });
+    }
+
+    /**
+     * Adds last visited Website Urls to combobox
+     * @param webEngine
+     * @param comboBox
+     */
+    private void addToHistory(WebEngine webEngine,ComboBox<String> comboBox){
+        webEngine.locationProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                comboBox.getItems().add(newValue);
+            }
+        });
+    }
+
+    public void putHistoryInSearchField(WebEngine engine, TextField searchField,ComboBox<String> comboBox){
+        comboBox.setOnAction(Event->searchField.setText(comboBox.getSelectionModel().getSelectedItem()));
     }
 
     /**
@@ -301,13 +334,16 @@ public class BrowserWindow extends BaseController implements Initializable {
      *
      * Sets up all necessary services for the Webview.
      */
-    private WebView setupWebServices(Tab tab, JFXButton forward, JFXButton back, JFXButton search, JFXButton refresh, JFXButton google, TextField searchField, JFXSpinner loading){
+    private WebView setupWebServices(Tab tab, JFXButton forward, JFXButton back, JFXButton search, JFXButton refresh, JFXButton google, TextField searchField, JFXSpinner loading, ComboBox<String> comboBox){
         final WebEngine engine;
         WebView webView = new WebView();
         engine = webView.getEngine();
         engine.load(DEFAULT_URL);
 
         setupButtons(engine, forward, back, search, refresh, google, searchField);
+
+        addToHistory(engine,comboBox);
+        putHistoryInSearchField(engine, searchField, comboBox);
 
         loading(engine, loading);
         ajustSearchField(engine, searchField);
