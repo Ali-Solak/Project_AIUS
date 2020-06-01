@@ -62,6 +62,7 @@ public class SatelliteDataWindow extends BaseController implements Initializable
     private InputOutput inputOutput;
     private XYChart.Series<String, Number> series1;
     private InternetSpeedData internetSpeedData;
+    private WifiSignalAdder wifiSignalAdder;
 
     public SatelliteDataWindow(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
@@ -70,9 +71,11 @@ public class SatelliteDataWindow extends BaseController implements Initializable
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+
         internetSpeedData = new InternetSpeedData();
         imageView.setLayoutX(1250);
-        WifiSignalAdder wifiSignalAdder = new WifiSignalAdder();
+        wifiSignalAdder = new WifiSignalAdder();
         wifiSignalAdder.ajustData(imageView);
 
         home.setOnAction(Event -> openHome());
@@ -94,8 +97,6 @@ public class SatelliteDataWindow extends BaseController implements Initializable
     public void ajustData(){
 
         final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
-        scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-
 
         scheduledExecutorService.scheduleAtFixedRate(() -> {
             long data = internetSpeedData.readInternetSpeed(internetSpeedData.getNet());
@@ -129,7 +130,7 @@ public class SatelliteDataWindow extends BaseController implements Initializable
         gaugeTile = TileBuilder.create()
                 .skinType(Tile.SkinType.GAUGE)
                 .minValue(0)
-                .maxValue(1500)
+                .maxValue(2000)
                 .prefSize(350, 210)
                 .barColor(Color.rgb(168,104,160))
                 .backgroundColor(Color.rgb(20,17,36))
@@ -139,7 +140,7 @@ public class SatelliteDataWindow extends BaseController implements Initializable
                 .borderWidth(1)
                 .title("Current Signal Power")
                 .unit("kb")
-                .threshold(800)
+                .threshold(1000)
                 .build();
 
         gaugeTile.setLayoutX(530);
@@ -215,30 +216,33 @@ public class SatelliteDataWindow extends BaseController implements Initializable
         mainWindow.getChildren().addAll(gaugeTile,smoothChartTile);
     }
 
+    public void closeThread(ScheduledExecutorService executorService){
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(60, TimeUnit.SECONDS);
+        } catch (Exception e) {
+        }
+
+    }
+
+    public ScheduledExecutorService getScheduledExecutorService() {
+        return scheduledExecutorService;
+    }
 
     public void openHome(){
-        scheduledExecutorService.shutdown();
+        wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
+        closeThread(getScheduledExecutorService());
         viewFactory.openMainWindow();
-        try {
-            scheduledExecutorService.awaitTermination(60, TimeUnit.SECONDS);
-        } catch (Exception e) {
-        }
     }
     public void openBrowser(){
-        scheduledExecutorService.shutdown();
+        wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
+        closeThread(getScheduledExecutorService());
         viewFactory.openBrowserWindow();
-        try {
-            scheduledExecutorService.awaitTermination(60, TimeUnit.SECONDS);
-        } catch (Exception e) {
-        }
     }
 
-    public void openMessage(){
-        scheduledExecutorService.shutdown();
+    public void openMessage() {
+        wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
+        closeThread(getScheduledExecutorService());
         viewFactory.openBlackboardWindow();
-        try {
-            scheduledExecutorService.awaitTermination(60, TimeUnit.SECONDS);
-        } catch (Exception e) {
-        }
     }
 }

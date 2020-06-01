@@ -7,20 +7,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d161310-6165-455e-9d9d-13c79da21f07" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Project_AIUS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_AIUS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Messages/message-006.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Messages/message-005.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/downExample.txt" beforeDir="false" afterPath="$PROJECT_DIR$/downExample.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/AIUS/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/AIUS/MainWindow.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/css/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/css/DarkTheme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BlackboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BlackboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BrowserWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BrowserWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/SatelliteDataWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/SatelliteDataWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Service/WifiSignalAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Service/WifiSignalAdder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AIUS-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/AIUS-1.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AIUS-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/AIUS-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AIUS.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Messages/message-000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AIUS/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AIUS/MainWindow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Project_AIUS.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BlackboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BlackboardController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/InternetSpeedData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/InternetSpeedData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/MainWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/SatelliteDataWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/SatelliteDataWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/WifiSignalAdder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/WifiSignalAdder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/css/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/DarkTheme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/downExample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-AIUS-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-AIUS-1.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,10 +105,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="A:/Project_AIUS/controlsfx-11.0.1.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3643678" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -114,6 +137,7 @@
     <configuration name="APP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project_AIUS.application.APP" />
       <module name="Project_AIUS" />
+      <option name="VM_PARAMETERS" value="-p &quot;C:\FX\javafx-sdk-11.0.2\lib&quot; --add-modules javafx.base,javafx.controls,javafx.fxml,javafx.graphics,javafx.media,javafx.swing,javafx.web --add-exports javafx.graphics/com.sun.javafx.sg.prism=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.util=ALL-UNNAMED --add-exports javafx.base/com.sun.javafx.logging=ALL-UNNAMED --add-exports javafx.graphics/com.sun.prism=ALL-UNNAMED --add-exports javafx.graphics/com.sun.glass.ui=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.geom.transform=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.tk=ALL-UNNAMED --add-exports javafx.graphics/com.sun.glass.utils=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.font=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED --add-exports javafx.controls/com.sun.javafx.scene.control=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.scene.input=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.geom=ALL-UNNAMED --add-exports javafx.graphics/com.sun.prism.paint=ALL-UNNAMED --add-exports javafx.graphics/com.sun.scenario.effect=ALL-UNNAMED --add-exports javafx.graphics/com.sun.javafx.text=ALL-UNNAMED --add-exports javafx.media/com.sun.media.jfxmedia.events=ALL-UNNAMED" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Project_AIUS.*" />
@@ -217,9 +241,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.APP" />
         <item itemvalue="JAR Application.AIUS-1.0-SNAPSHOT.jar" />
         <item itemvalue="Maven.AIUS [javafx:run]" />
-        <item itemvalue="Application.APP" />
       </list>
     </recent_temporary>
   </component>
@@ -302,6 +326,8 @@
       <workItem from="1590912929947" duration="3804000" />
       <workItem from="1590917097207" duration="38000" />
       <workItem from="1590917481688" duration="873000" />
+      <workItem from="1591011567629" duration="589000" />
+      <workItem from="1591030835044" duration="10040000" />
     </task>
     <servers />
   </component>
@@ -309,46 +335,50 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588616672698">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591037487916">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588616672698" />
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1590879784840">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1591037487916" />
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1591040674061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1590879784840" />
+    <state x="574" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591040674061" />
     <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589057642802">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1589057642802" />
-    <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1589057957249">
+    <state x="599" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1591035925859">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589057957249" />
+    <state x="599" y="123" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1536.824@0.0.1536.824" timestamp="1591035925859" />
+    <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1591036922673">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1591036922673" />
     <state x="503" y="291" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583575989469">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="291" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1583575989469" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590769027204">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1591037008536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590769027204" />
-    <state width="1493" height="222" key="GridCell.Tab.0.bottom" timestamp="1590918358766">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591037008536" />
+    <state width="1493" height="222" key="GridCell.Tab.0.bottom" timestamp="1591040934820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590918358766" />
-    <state width="1493" height="222" key="GridCell.Tab.0.center" timestamp="1590918358766">
+    <state width="1493" height="222" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
+    <state width="1493" height="222" key="GridCell.Tab.0.center" timestamp="1591040934820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590918358766" />
-    <state width="1493" height="222" key="GridCell.Tab.0.left" timestamp="1590918358766">
+    <state width="1493" height="222" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
+    <state width="1493" height="222" key="GridCell.Tab.0.left" timestamp="1591040934820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590918358766" />
-    <state width="1493" height="222" key="GridCell.Tab.0.right" timestamp="1590918358766">
+    <state width="1493" height="222" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
+    <state width="1493" height="222" key="GridCell.Tab.0.right" timestamp="1591040934820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590918358766" />
+    <state width="1493" height="222" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590880095699">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -365,10 +395,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590880095699" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1590345165832">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1591037481755">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590345165832" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591037481755" />
     <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1590319502880">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -42,12 +42,6 @@ import java.util.*;
 public class BlackboardController extends BaseController implements Initializable {
 
     private InputOutput inputOutput = new InputOutput();
-    private Message m1;
-    private Message m2;
-    private Message m3;
-    private Message m4;
-    private Message m5;
-    private Message m6;
     private Boolean running = true;
     private List<Integer> messageCounter = new ArrayList<>();
     @FXML
@@ -60,7 +54,6 @@ public class BlackboardController extends BaseController implements Initializabl
     private JFXButton satellite;
     @FXML
     private JFXButton settings;
-
     @FXML
     private Button add;
     @FXML

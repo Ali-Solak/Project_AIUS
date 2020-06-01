@@ -7,13 +7,19 @@ import  Project_AIUS.View.ViewFactory;
 import com.jfoenix.controls.JFXButton;
 import eu.hansolo.medusa.Clock;
 import eu.hansolo.medusa.ClockBuilder;
+import javafx.animation.Animation;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.util.Duration;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
@@ -29,6 +35,8 @@ public class MainWindow extends BaseController implements Initializable {
     @FXML private AnchorPane mainWindow;
     @FXML private Clock clock;
     @FXML private ImageView imageView;
+    @FXML private ProgressBar signalBar;
+    @FXML private Label signalLabel;
     private WifiSignalAdder wifiSignalAdder;
 
     public MainWindow(ViewFactory viewFactory, String fxmlName) {
@@ -38,8 +46,19 @@ public class MainWindow extends BaseController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        //flashing animation for label
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(1), signalLabel);
+        fadeTransition.setFromValue(1.0);
+        fadeTransition.setToValue(0.0);
+        fadeTransition.setCycleCount(Animation.INDEFINITE);
+        fadeTransition.play();
+
+        signalBar.setVisible(false);
+        signalLabel.setVisible(false);
         wifiSignalAdder = new WifiSignalAdder();
         wifiSignalAdder.ajustData(imageView);
+        wifiSignalAdder.lookingForSignal(signalBar,signalLabel);
+
 
         clock = ClockBuilder.create()
                 .skinType(Clock.ClockSkinType.SLIM)
@@ -73,29 +92,17 @@ public class MainWindow extends BaseController implements Initializable {
     }
 
     public void openSatData(){
-        wifiSignalAdder.getScheduledExecutorService().shutdown();
+        wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
         viewFactory.openSatDataWindow();
-        try {
-            wifiSignalAdder.getScheduledExecutorService().awaitTermination(60, TimeUnit.SECONDS);
-        } catch (Exception e) {
-        }
     }
     public void openBrowser(){
-        wifiSignalAdder.getScheduledExecutorService().shutdown();
+        wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
         viewFactory.openBrowserWindow();
-        try {
-            wifiSignalAdder.getScheduledExecutorService().awaitTermination(60, TimeUnit.SECONDS);
-        } catch (Exception e) {
-        }
     }
 
     public void openMessage(){
-        wifiSignalAdder.getScheduledExecutorService().shutdown();
+        wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
         viewFactory.openBlackboardWindow();
-        try {
-            wifiSignalAdder.getScheduledExecutorService().awaitTermination(60, TimeUnit.SECONDS);
-        } catch (Exception e) {
-        }
     }
 }
 

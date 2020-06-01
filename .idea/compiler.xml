@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Project_AIUS" />
-        <module name="AIUS" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="10">
+      <module name="AIUS" target="11" />
       <module name="Project_AIUS" target="11" />
     </bytecodeTargetLevel>
   </component>

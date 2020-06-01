@@ -1,6 +1,8 @@
 package  Project_AIUS.Service;
 
 import javafx.application.Platform;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -62,6 +64,28 @@ public class WifiSignalAdder {
         }
         return false;
     }
+
+    public void lookingForSignal(ProgressBar progressBar, Label label) {
+
+        scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+
+
+        scheduledExecutorService.scheduleAtFixedRate(() -> {
+            // Update
+            Platform.runLater(() -> {
+
+                if (checkInternetConnection()) {
+                    progressBar.setVisible(false);
+                    label.setVisible(false);
+                }
+                else {
+                    progressBar.setVisible(true);
+                    label.setVisible(true);
+                }
+            });
+        }, 0, 10, TimeUnit.SECONDS);
+    }
+
     public void closeThread(ScheduledExecutorService executorService){
         executorService.shutdown();
         try {

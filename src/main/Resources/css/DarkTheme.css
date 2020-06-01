@@ -146,3 +146,23 @@
 .scroll-pane > .corner {
     -fx-background-color: #141124;
 }
+
+.progress-bar > .track {
+    -fx-text-box-border: #141124;
+    -fx-control-inner-background: #141124;
+    -fx-background-radius:0;
+    -fx-background-insets: 0, 1;
+}
+
+
+.progress-bar > .bar {
+    -fx-padding:0;
+    -fx-background-radius:0;
+    -fx-background-insets: 0;
+    -fx-background-color: #A868A0;
+}
+
+.progress-bar > .bar, .progress-bar > .track {
+    -fx-background-insets: 0;
+}
+
