@@ -62,6 +62,9 @@ public class WifiSignalAdder {
         } catch (IOException e) {
             System.out.println("Internet is not connected");
         }
+        catch(Exception e){
+            System.out.println("other connection failure");
+        }
         return false;
     }
 

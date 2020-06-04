@@ -1,17 +1,13 @@
 package  Project_AIUS.View;
 
 import  Project_AIUS.Controller.*;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * ViewFactory to switch between Scenes and put CSS files on Scenes
@@ -29,15 +25,15 @@ public class ViewFactory {
     }
 
     public void openMainWindow(){
-        BaseController mainWindow = new MainWindow(this, "/AIUS/MainWindow.fxml");
+        BaseController mainWindow = new MainWindowController(this, "/AIUS/MainWindow.fxml");
         initializeWindow(mainWindow);
     }
     public void openBrowserWindow(){
-        BaseController browserWindow = new BrowserWindow(this, "/AIUS/BrowserWindow.fxml");
+        BaseController browserWindow = new BrowserController(this, "/AIUS/BrowserWindow.fxml");
         initializeWindow(browserWindow);
     }
     public void openSatDataWindow(){
-        BaseController browserWindow = new SatelliteDataWindow(this, "/AIUS/SatelliteDataWindow.fxml");
+        BaseController browserWindow = new SatelliteDataController(this, "/AIUS/SatelliteDataWindow.fxml");
         initializeWindow(browserWindow);
     }
     public void openBlackboardWindow(){
@@ -45,7 +41,7 @@ public class ViewFactory {
         initializeWindow(browserWindow);
     }
     public void openAddStage(){
-        BaseController addWindow = new addMessageWindow(this,"/AIUS/addMessageWindow.fxml");
+        BaseController addWindow = new addMessageController(this,"/AIUS/addMessageWindow.fxml");
         initializeStage(addWindow);
     }
 

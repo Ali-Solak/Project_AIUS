@@ -37,7 +37,7 @@ import java.util.*;
 
 /**
  * Window to leave messages.
- * Window reads text files. If files are written, the panels with text are created
+ * Window reads all text files in folder and creates a message-pane for all to make them visible.
  */
 public class BlackboardController extends BaseController implements Initializable {
 
@@ -68,6 +68,8 @@ public class BlackboardController extends BaseController implements Initializabl
 
     public BlackboardController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
+
+        Message message = new Message("df");
 
         try {
             File directory = new File("Messages");
@@ -141,7 +143,7 @@ public class BlackboardController extends BaseController implements Initializabl
     }
 
     /**
-     * Creates Message-Panes with labels and close buttons
+     * Takes File and Creates Message-Panes with labels and close buttons. Uses x and y positions
      * @param file
      * @param x
      * @param y

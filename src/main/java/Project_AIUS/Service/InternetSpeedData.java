@@ -34,12 +34,22 @@ public class InternetSpeedData {
 
         try {
             this.url = new URL("http://speedtest.ftp.otenet.gr/files/test1Mb.db");
+
         } catch (java.net.MalformedURLException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
         }
 
     }
 
+    /**
+     * Downloads example file and calculates download speed by looking at the received bytes
+     * on the Network adapter
+     * @param net
+     * @return
+     */
     public long readInternetSpeed(NetworkIF net) {
 
         long download1 = net.getBytesRecv();
@@ -49,7 +59,7 @@ public class InternetSpeedData {
             FileOutputStream fos = new FileOutputStream("downExample.txt");
             fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
         } catch (Exception e) {
-
+            System.out.println(e.getMessage());
         }
 
         //Updating network stats

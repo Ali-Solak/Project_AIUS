@@ -77,7 +77,7 @@
             </Label>
             <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="30.0" layoutX="740.0" pickOnBounds="true" preserveRatio="true" />
             <ProgressBar fx:id="signalBar" layoutX="76.0" layoutY="64.0" prefHeight="10.0" prefWidth="922.0" />
-            <Label fx:id="signalLabel" layoutX="462.0" layoutY="93.0" text="Looking for signal" textFill="#a868a0">
+            <Label fx:id="signalLabel" layoutX="462.0" layoutY="93.0" text="Searching for signal..." textFill="#a868a0">
                <font>
                   <Font size="24.0" />
                </font>

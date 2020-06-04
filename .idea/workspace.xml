@@ -7,43 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d161310-6165-455e-9d9d-13c79da21f07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Project_AIUS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project_AIUS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Messages/message-005.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/downExample.txt" beforeDir="false" afterPath="$PROJECT_DIR$/downExample.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Resources/AIUS/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/AIUS/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/css/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/css/DarkTheme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BlackboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BlackboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BrowserWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BrowserWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/SatelliteDataWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/SatelliteDataWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BrowserWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/BrowserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/MainWindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/SatelliteDataWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/SatelliteDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/addMessageWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Controller/addMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Service/InternetSpeedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Service/InternetSpeedData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/Service/WifiSignalAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/Service/WifiSignalAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AIUS-1.0-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/AIUS-1.0-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Project_AIUS/View/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Project_AIUS/View/ViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AIUS-1.0-shaded.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AIUS-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/AIUS-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/AIUS.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Messages/message-000.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/AIUS/MainWindow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AIUS/MainWindow.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Project_AIUS.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BlackboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BlackboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/SatelliteDataWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/SatelliteDataWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/BrowserWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/MainWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/SatelliteDataWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Controller/addMessageWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/InternetSpeedData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/InternetSpeedData.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/WifiSignalAdder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/Service/WifiSignalAdder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/css/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/DarkTheme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/downExample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Project_AIUS/View/ViewFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Project_AIUS/View/ViewFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/original-AIUS-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-AIUS-1.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +58,9 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CodeIris Favorites" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,13 +99,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="A:/Project_AIUS/controlsfx-11.0.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Project_AIUS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3643678" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -328,6 +322,15 @@
       <workItem from="1590917481688" duration="873000" />
       <workItem from="1591011567629" duration="589000" />
       <workItem from="1591030835044" duration="10040000" />
+      <workItem from="1591087139340" duration="1304000" />
+      <workItem from="1591089556936" duration="753000" />
+      <workItem from="1591090422962" duration="578000" />
+      <workItem from="1591091771472" duration="2065000" />
+      <workItem from="1591119165791" duration="832000" />
+      <workItem from="1591255253700" duration="1403000" />
+      <workItem from="1591256688651" duration="698000" />
+      <workItem from="1591257423262" duration="28000" />
+      <workItem from="1591257465974" duration="1742000" />
     </task>
     <servers />
   </component>
@@ -359,46 +362,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="291" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1583575989469" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1591037008536">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1591119322499">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591037008536" />
-    <state width="1493" height="222" key="GridCell.Tab.0.bottom" timestamp="1591040934820">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591119322499" />
+    <state width="1493" height="222" key="GridCell.Tab.0.bottom" timestamp="1591259310059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
-    <state width="1493" height="222" key="GridCell.Tab.0.center" timestamp="1591040934820">
+    <state width="1493" height="222" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591259310059" />
+    <state width="1493" height="222" key="GridCell.Tab.0.center" timestamp="1591259310059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
-    <state width="1493" height="222" key="GridCell.Tab.0.left" timestamp="1591040934820">
+    <state width="1493" height="222" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591259310059" />
+    <state width="1493" height="222" key="GridCell.Tab.0.left" timestamp="1591259310059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
-    <state width="1493" height="222" key="GridCell.Tab.0.right" timestamp="1591040934820">
+    <state width="1493" height="222" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591259310059" />
+    <state width="1493" height="222" key="GridCell.Tab.0.right" timestamp="1591259310059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="222" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591040934820" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1590880095699">
+    <state width="1493" height="222" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591259310059" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1591120005663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590880095699" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1590880095699">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591120005663" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1591120005663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590880095699" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1590880095699">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591120005663" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1591120005663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590880095699" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1590880095699">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591120005663" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1591120005663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590880095699" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1591037481755">
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591120005663" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1591258072699">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591037481755" />
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591258072699" />
     <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1590319502880">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -4,7 +4,6 @@ Project_AIUS\Service\FileComparator.class
 Project_AIUS\Controller\BaseController.class
 Project_AIUS\Controller\BlackboardController.class
 Project_AIUS\Model\Message.class
-Project_AIUS\Controller\BrowserWindow$6.class
 module-info.class
 Project_AIUS\Controller\addMessageWindow.class
 Project_AIUS\Controller\BrowserWindow$3.class
