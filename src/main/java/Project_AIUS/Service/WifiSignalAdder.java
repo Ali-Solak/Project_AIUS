@@ -59,7 +59,7 @@ public class WifiSignalAdder {
         try {
             InetAddress[] addresses = InetAddress.getAllByName("www.google.com");
             for (InetAddress address : addresses) {
-                if (address.isReachable(10000))
+                if (address.isReachable(1000))
                 {
                     return true;
                 }
@@ -69,12 +69,15 @@ public class WifiSignalAdder {
                 }
             }
         } catch (MalformedURLException e) {
-            System.out.println("Internet is not connected");
+            System.out.println("Internet is not connected1");
+            return false;
         } catch (IOException e) {
-            System.out.println("Internet is not connected");
+            System.out.println("Internet is not connected2");
+            return false;
         }
         catch(Exception e){
             System.out.println("other connection failure");
+            return false;
         }
         return false;
     }
