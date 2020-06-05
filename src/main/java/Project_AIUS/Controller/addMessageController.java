@@ -40,7 +40,6 @@ public class addMessageController extends BaseController implements Initializabl
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         add.setOnAction(Event -> createMessage());
-        warning.setVisible(false);
     }
 
     /**
@@ -52,6 +51,7 @@ public class addMessageController extends BaseController implements Initializabl
         int counter = 0;
         boolean running = true;
         String filenname = null;
+
         while (running && counter < 100) {
             try {
                 filenname = String.format("%s-%03d", "message", counter);

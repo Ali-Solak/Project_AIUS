@@ -1,11 +1,14 @@
 package Project_AIUS.Service;
 
 import Project_AIUS.Exception.NetworkNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import oshi.SystemInfo;
 import oshi.hardware.HardwareAbstractionLayer;
 import oshi.hardware.NetworkIF;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
@@ -21,7 +24,13 @@ public class InternetSpeedData {
     private NetworkIF[] networks;
     private URL url;
 
+
     public InternetSpeedData() {
+
+        //Allow renegotiation to socket in case of lost connection to prevent crash
+        System.setProperty( "sun.security.ssl.allowUnsafeRenegotiation", "true" );
+
+
         this.si = new SystemInfo();
         this.hal = si.getHardware();
         this.networks = hal.getNetworkIFs().toArray(new NetworkIF[0]);
@@ -58,7 +67,10 @@ public class InternetSpeedData {
             ReadableByteChannel rbc = Channels.newChannel(url.openStream());
             FileOutputStream fos = new FileOutputStream("downExample.txt");
             fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
-        } catch (Exception e) {
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        catch (Exception e){
             System.out.println(e.getMessage());
         }
 

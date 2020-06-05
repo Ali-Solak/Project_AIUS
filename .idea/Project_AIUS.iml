@@ -39,7 +39,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://A:/Project_AIUS/controlsfx-11.0.1.jar!/" />
+          <root url="jar://A:/Project_AIUS/slf4j-jdk14-2.0.0-alpha1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

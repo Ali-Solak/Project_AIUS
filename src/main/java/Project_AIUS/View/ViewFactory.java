@@ -11,6 +11,7 @@ import java.io.IOException;
 
 /**
  * ViewFactory to switch between Scenes and put CSS files on Scenes
+ * and work out any View related functionalities at one spot
  */
 public class ViewFactory {
 

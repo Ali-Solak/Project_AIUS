@@ -10,7 +10,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         <configuration>
-          <release>11</release>
+          <release>12</release>
         </configuration>
       </plugin>
       <plugin>
@@ -64,6 +64,14 @@
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-jdk14</artifactId>
+      <version>2.0.0-alpha0</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
   <distributionManagement>
     <repository>
       <id>internal.repo</id>

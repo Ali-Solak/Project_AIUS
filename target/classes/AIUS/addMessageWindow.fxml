@@ -19,10 +19,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="warning" layoutX="46.0" layoutY="25.0" prefHeight="24.0" prefWidth="231.0" text="Maximum Messages reached!" textFill="RED">
-         <font>
-            <Font name="Arial Black" size="14.0" />
-         </font></Label>
       <TextArea fx:id="textField" layoutX="61.0" layoutY="59.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

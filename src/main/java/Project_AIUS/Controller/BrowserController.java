@@ -75,7 +75,7 @@ public class BrowserController extends BaseController implements Initializable {
         setUpTabs();
     }
 
-    @FXML
+
     public void search(WebEngine engine, TextField searchField) {
         searchInput = searchField.getText();
         if (searchField.getText().contains("https:")) {
@@ -158,6 +158,8 @@ public class BrowserController extends BaseController implements Initializable {
                     bp.setCenter(setupWebServices(tab, forward, back, search, refresh, google, searchField, loading, history));
                     tab.setContent(bp);
 
+
+                    //observable if all tabs are closed, create new tab
                     final ObservableList<Tab> tabs = tb.getTabs();
                     tab.closableProperty().bind(Bindings.size(tabs).greaterThan(2));
                     tabs.add(tabs.size() - 1, tab);
@@ -231,6 +233,11 @@ public class BrowserController extends BaseController implements Initializable {
         engine.reload();
     }
 
+    /**
+     * Sets up closing button for tab
+     * @param tab
+     * @return
+     */
     private Button closeButton(Tab tab) {
         StackedFontIcon stackedFontIcon = new StackedFontIcon();
         FontIcon fontIcon = new FontIcon("eli-remove-circle");

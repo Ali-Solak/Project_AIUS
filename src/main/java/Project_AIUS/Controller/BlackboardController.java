@@ -97,9 +97,8 @@ public class BlackboardController extends BaseController implements Initializabl
         home.setOnAction(Event -> viewFactory.openMainWindow());
         browser.setOnAction(Event -> viewFactory.openBrowserWindow());
         satellite.setOnAction(Event -> viewFactory.openSatDataWindow());
-
-
         add.setOnAction(Event -> viewFactory.openAddStage());
+
         setupMessages(readMessagesAndSort());
     }
 
@@ -120,7 +119,7 @@ public class BlackboardController extends BaseController implements Initializabl
     }
 
     /**
-     * uses setupMessagePane to write in Textfield and moves Message-Panes in right position
+     * uses setupMessagePane to create Messag-Panes for every file and moves Message-Panes in right position
      * by iterating through all files and increasing x and y positions.
      * @param fileListo
      */

@@ -118,13 +118,15 @@ public class SatelliteDataController extends BaseController implements Initializ
     }
 
     public void setupCharts(){
-
+/*
         chartData1 = new ChartData("1", 0, Tile.MAGENTA);
         chartData2 = new ChartData("2", 0, Tile.BLUE);
         chartData3 = new ChartData("3", 0, Tile.RED);
         chartData4 = new ChartData("4", 0, Tile.YELLOW_ORANGE);
         chartData5 = new ChartData("5", 0, Tile.BLUE);
         chartData6 = new ChartData("6", 0, Tile.BLUE);
+
+ */
 
 
         gaugeTile = TileBuilder.create()
@@ -169,7 +171,6 @@ public class SatelliteDataController extends BaseController implements Initializ
                 .knobColor(Color.rgb(168,104,160))
                 .barColor(Color.rgb(168,104,160))
                 .needleColor(Color.rgb(168,104,160))
-
                 .animated(true)
                 .build();
 

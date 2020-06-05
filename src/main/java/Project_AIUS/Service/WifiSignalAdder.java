@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -27,6 +28,9 @@ public class WifiSignalAdder {
 
 
     public WifiSignalAdder() {
+        //Allow renegotiation to socket in case of lost connection to prevent crash
+        System.setProperty( "sun.security.ssl.allowUnsafeRenegotiation", "true" );
+
         image0 = new Image(getClass().getResource("/images/noInternet.jpg").toExternalForm());
         image1 = new Image(getClass().getResource("/images/wifi4.jpg").toExternalForm());
 
@@ -53,10 +57,17 @@ public class WifiSignalAdder {
 
     public boolean checkInternetConnection() {
         try {
-            URL url = new URL("http://www.google.com");
-            URLConnection connection = url.openConnection();
-            connection.connect();
-            return true;
+            InetAddress[] addresses = InetAddress.getAllByName("www.google.com");
+            for (InetAddress address : addresses) {
+                if (address.isReachable(10000))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         } catch (MalformedURLException e) {
             System.out.println("Internet is not connected");
         } catch (IOException e) {
@@ -67,6 +78,8 @@ public class WifiSignalAdder {
         }
         return false;
     }
+
+
 
     public void lookingForSignal(ProgressBar progressBar, Label label) {
 
