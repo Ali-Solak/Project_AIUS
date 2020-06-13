@@ -1,14 +1,15 @@
-package  Project_AIUS.Controller;
+package Project_AIUS.Controller;
 
 
-
-import  Project_AIUS.Service.WifiSignalAdder;
-import  Project_AIUS.View.ViewFactory;
+import Project_AIUS.Service.WifiSignalAdder;
+import Project_AIUS.View.ViewFactory;
 import com.jfoenix.controls.JFXButton;
 import eu.hansolo.medusa.Clock;
 import eu.hansolo.medusa.ClockBuilder;
 import javafx.animation.Animation;
 import javafx.animation.FadeTransition;
+import javafx.application.Platform;
+import javafx.embed.swing.SwingNode;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -20,23 +21,36 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
+import javax.swing.*;
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
 public class MainWindowController extends BaseController implements Initializable {
 
-    @FXML private JFXButton home;
-    @FXML private JFXButton browser;
-    @FXML private JFXButton message;
-    @FXML private JFXButton satellite;
-    @FXML private JFXButton settings;
-    @FXML private ImageView image;
-    @FXML private AnchorPane mainWindow;
-    @FXML private Clock clock;
-    @FXML private ImageView imageView;
-    @FXML private ProgressBar signalBar;
-    @FXML private Label signalLabel;
+    @FXML
+    private JFXButton home;
+    @FXML
+    private JFXButton browser;
+    @FXML
+    private JFXButton message;
+    @FXML
+    private JFXButton satellite;
+    @FXML
+    private JFXButton settings;
+    @FXML
+    private ImageView image;
+    @FXML
+    private AnchorPane mainWindow;
+    @FXML
+    private Clock clock;
+    @FXML
+    private ImageView imageView;
+    @FXML
+    private ProgressBar signalBar;
+    @FXML
+    private Label signalLabel;
     private WifiSignalAdder wifiSignalAdder;
 
     public MainWindowController(ViewFactory viewFactory, String fxmlName) {
@@ -45,6 +59,7 @@ public class MainWindowController extends BaseController implements Initializabl
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
 
         //flashing animation for label
         FadeTransition fadeTransition = new FadeTransition(Duration.seconds(1), signalLabel);
@@ -57,7 +72,7 @@ public class MainWindowController extends BaseController implements Initializabl
         signalLabel.setVisible(false);
         wifiSignalAdder = new WifiSignalAdder();
         wifiSignalAdder.ajustData(imageView);
-        wifiSignalAdder.lookingForSignal(signalBar,signalLabel);
+        wifiSignalAdder.lookingForSignal(signalBar, signalLabel);
 
 
         clock = ClockBuilder.create()
@@ -67,16 +82,16 @@ public class MainWindowController extends BaseController implements Initializabl
                 .text("Bukalagi")
                 .prefWidth(150)
                 .prefHeight(150)
-                .textColor(Color.rgb(168,104,160))
-                .titleColor(Color.rgb(168,104,160))
-                .hourTickMarkColor(Color.rgb(168,104,160))
-                .secondColor(Color.rgb(168,104,160))
-                .tickLabelColor(Color.rgb(168,104,160))
-                .minuteTickMarkColor(Color.rgb(168,104,160))
-                .dateColor(Color.rgb(168,104,160))
-                .knobColor(Color.rgb(168,104,160))
-                .minuteColor(Color.rgb(168,104,160))
-                .hourColor(Color.rgb(168,104,160))
+                .textColor(Color.rgb(168, 104, 160))
+                .titleColor(Color.rgb(168, 104, 160))
+                .hourTickMarkColor(Color.rgb(168, 104, 160))
+                .secondColor(Color.rgb(168, 104, 160))
+                .tickLabelColor(Color.rgb(168, 104, 160))
+                .minuteTickMarkColor(Color.rgb(168, 104, 160))
+                .dateColor(Color.rgb(168, 104, 160))
+                .knobColor(Color.rgb(168, 104, 160))
+                .minuteColor(Color.rgb(168, 104, 160))
+                .hourColor(Color.rgb(168, 104, 160))
                 .running(true)
                 .build();
 
@@ -89,18 +104,20 @@ public class MainWindowController extends BaseController implements Initializabl
         browser.setOnAction(Event -> openBrowser());
         message.setOnAction(Event -> openMessage());
         satellite.setOnAction(Event -> openSatData());
+
     }
 
-    public void openSatData(){
+    public void openSatData() {
         wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
         viewFactory.openSatDataWindow();
     }
-    public void openBrowser(){
+
+    public void openBrowser() {
         wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
         viewFactory.openBrowserWindow();
     }
 
-    public void openMessage(){
+    public void openMessage() {
         wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
         viewFactory.openBlackboardWindow();
     }

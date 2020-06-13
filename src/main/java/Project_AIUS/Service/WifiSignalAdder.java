@@ -59,7 +59,7 @@ public class WifiSignalAdder {
         try {
             InetAddress[] addresses = InetAddress.getAllByName("www.google.com");
             for (InetAddress address : addresses) {
-                if (address.isReachable(1000))
+                if (address.isReachable(5000))
                 {
                     return true;
                 }

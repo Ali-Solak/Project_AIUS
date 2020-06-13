@@ -6,6 +6,7 @@ module Project_AIUS {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires javafx.swing;
 
     requires org.kordamp.ikonli.elusive;
     requires org.kordamp.ikonli.entypo;
@@ -19,4 +20,6 @@ module Project_AIUS {
     opens Project_AIUS.Controller;
     opens Project_AIUS.application;
     exports Project_AIUS;
+
 }
+

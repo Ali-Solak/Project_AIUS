@@ -69,8 +69,6 @@ public class BlackboardController extends BaseController implements Initializabl
     public BlackboardController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
 
-        Message message = new Message("df");
-
         try {
             File directory = new File("Messages");
             if (! directory.exists()){
@@ -119,7 +117,7 @@ public class BlackboardController extends BaseController implements Initializabl
     }
 
     /**
-     * uses setupMessagePane to create Messag-Panes for every file and moves Message-Panes in right position
+     * uses setupMessagePane to create Message-Panes for every file and moves Message-Panes in right position
      * by iterating through all files and increasing x and y positions.
      * @param fileListo
      */

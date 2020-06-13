@@ -1,5 +1,6 @@
 package Project_AIUS.Controller;
 
+import Project_AIUS.Service.Browser;
 import Project_AIUS.Service.WifiSignalAdder;
 import Project_AIUS.View.ViewFactory;
 import com.jfoenix.controls.JFXButton;
@@ -11,12 +12,15 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Worker;
+import javafx.embed.swing.SwingNode;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -30,6 +34,8 @@ import org.kordamp.ikonli.javafx.StackedFontIcon;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import javax.swing.*;
+import java.awt.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
@@ -58,9 +64,7 @@ public class BrowserController extends BaseController implements Initializable {
     private TabPane tb;
     private WifiSignalAdder wifiSignalAdder;
 
-    String htLink = "https://";
-    String DEFAULT_URL = "https://www.google.com";
-    String searchInput;
+
 
     public BrowserController(ViewFactory viewFactory, String fxmlName) {
         super(viewFactory, fxmlName);
@@ -76,32 +80,6 @@ public class BrowserController extends BaseController implements Initializable {
     }
 
 
-    public void search(WebEngine engine, TextField searchField) {
-        searchInput = searchField.getText();
-        if (searchField.getText().contains("https:")) {
-            engine.load(searchInput);
-        } else {
-            engine.load(htLink + searchInput);
-        }
-
-    }
-
-    /**
-     * Inject JavaScript into Webview to go back to last visited site
-     *
-     * @param engine
-     */
-    public void goBack(WebEngine engine) {
-        Platform.runLater(() -> {
-            engine.executeScript("history.back()");
-        });
-    }
-
-    public void goForward(WebEngine engine) {
-        Platform.runLater(() -> {
-            engine.executeScript("history.forward()");
-        });
-    }
 
     /**
      * A tab is created with an attached listener, if a the tab(plus button) is pressed
@@ -155,7 +133,8 @@ public class BrowserController extends BaseController implements Initializable {
 
                     bp.setTop(hBox);
 
-                    bp.setCenter(setupWebServices(tab, forward, back, search, refresh, google, searchField, loading, history));
+                    Browser browser = new Browser();
+                    bp.setCenter(browser.setupWebServices(tab, forward, back, search, refresh, google, searchField, loading, history));
                     tab.setContent(bp);
 
 
@@ -164,21 +143,15 @@ public class BrowserController extends BaseController implements Initializable {
                     tab.closableProperty().bind(Bindings.size(tabs).greaterThan(2));
                     tabs.add(tabs.size() - 1, tab);
 
+                    //close respective tab
                     tb.getSelectionModel().select(tab);
-                    tab.setGraphic(closeButton(tab));
+                    tab.setGraphic(closeButton(browser, tab));
                 }
             }
         });
     }
 
-    private void setupButtons(WebEngine engine, JFXButton forward, JFXButton back, JFXButton search, JFXButton refresh, JFXButton google, TextField searchField) {
-        forward.setOnAction(Event -> goForward(engine));
-        back.setOnAction(Event -> goBack(engine));
-        search.setOnAction(Event -> search(engine, searchField));
-        refresh.setOnAction(Event -> reload(engine));
-        google.setOnAction(Event -> engine.load(DEFAULT_URL));
 
-    }
 
     private void setupFirstTab() {
         ImageView imageView = new ImageView();
@@ -209,7 +182,9 @@ public class BrowserController extends BaseController implements Initializable {
         HBox.setHgrow(searchField, Priority.ALWAYS);
         forward.setTranslateX(-13);
 
-        bp.setCenter(setupWebServices(firstTab, forward, back, search, refresh, google, searchField, loading, history));
+        Browser browser = new Browser();
+
+        bp.setCenter(browser.setupWebServices(firstTab, forward, back, search, refresh, google, searchField, loading, history));
         bp.setTop(hBox);
 
         firstTab.setContent(bp);
@@ -217,28 +192,26 @@ public class BrowserController extends BaseController implements Initializable {
         firstTab.setText("Start");
         firstTab.setClosable(true);
         tb.getTabs().addAll(firstTab);
-        firstTab.setGraphic(closeButton(firstTab));
+        firstTab.setGraphic(closeButton(browser, firstTab));
     }
 
-    private void closeTab(Tab tab) {
+    private void closeTab(Browser browser, Tab tab) {
         EventHandler<Event> handler = tab.getOnClosed();
         if (handler != null) {
             handler.handle(null);
         } else {
             tab.getTabPane().getTabs().remove(tab);
+            browser.closeBrowser();
         }
     }
 
-    private void reload(WebEngine engine) {
-        engine.reload();
-    }
 
     /**
      * Sets up closing button for tab
      * @param tab
      * @return
      */
-    private Button closeButton(Tab tab) {
+    private Button closeButton(Browser browser, Tab tab) {
         StackedFontIcon stackedFontIcon = new StackedFontIcon();
         FontIcon fontIcon = new FontIcon("eli-remove-circle");
         fontIcon.setFill(Color.rgb(168, 104, 160));
@@ -246,7 +219,7 @@ public class BrowserController extends BaseController implements Initializable {
         Button closeButton = new Button();
         closeButton.setGraphic(stackedFontIcon);
 
-        closeButton.setOnAction(Event -> closeTab(tab));
+        closeButton.setOnAction(Event -> closeTab(browser, tab));
 
         closeButton.setStyle("-fx-background-color: none;" +
                 "-fx-background-radius: 0 0 0 0;");
@@ -266,125 +239,6 @@ public class BrowserController extends BaseController implements Initializable {
         return button;
     }
 
-    /**
-     * @param webEngine
-     * @param loading   Uses Listener to check worker state of the webengine and binds it to spinner.
-     *                  Shows a loading symbol if something is being loaded.
-     */
-    private void loading(WebEngine webEngine, JFXSpinner loading) {
-
-        loading.progressProperty().bind(webEngine.getLoadWorker().progressProperty());
-        webEngine.getLoadWorker().stateProperty().addListener(
-                new ChangeListener<Worker.State>() {
-                    @Override
-                    public void changed(ObservableValue ov, Worker.State oldState, Worker.State newState) {
-                        if (newState == Worker.State.SUCCEEDED) {
-
-                            loading.setVisible(false);
-                        }
-                        if (newState == Worker.State.RUNNING) {
-                            loading.setVisible(true);
-                        }
-                    }
-                });
-    }
-
-    /**
-     * @param webEngine
-     * @param searchField Ajusts the search field in the browser with the current used websites link
-     */
-    private void ajustSearchField(WebEngine webEngine, TextField searchField) {
-        webEngine.locationProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                searchField.setText(newValue);
-            }
-        });
-    }
-
-    private void ajustTabText(WebEngine webEngine, Tab tab) {
-        webEngine.locationProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                if (newValue.contains("www")) {
-                    tab.setText(newValue.substring(12, 18));
-                } else {
-                    tab.setText(newValue.substring(8, 18));
-                }
-            }
-        });
-    }
-
-    /**
-     * Adds last visited Website Urls to combobox
-     *
-     * @param webEngine
-     * @param comboBox
-     */
-    private void addToHistory(WebEngine webEngine, ComboBox<String> comboBox) {
-        webEngine.locationProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                comboBox.getItems().add(newValue);
-            }
-        });
-    }
-
-    public void putHistoryInSearchField(WebEngine engine, TextField searchField, ComboBox<String> comboBox) {
-        comboBox.setOnAction(Event -> searchField.setText(comboBox.getSelectionModel().getSelectedItem()));
-    }
-
-    /**
-     * @param tab
-     * @param forward
-     * @param back
-     * @param search
-     * @param refresh
-     * @param google
-     * @param searchField
-     * @param loading
-     * @return Webview
-     * Sets up all necessary services for the Webview.
-     */
-    private WebView setupWebServices(Tab tab, JFXButton forward, JFXButton back, JFXButton search, JFXButton refresh, JFXButton google, TextField searchField, JFXSpinner loading, ComboBox<String> comboBox) {
-        final WebEngine engine;
-        WebView webView = new WebView();
-        engine = webView.getEngine();
-        engine.load(DEFAULT_URL);
-
-        setupButtons(engine, forward, back, search, refresh, google, searchField);
-
-        addToHistory(engine, comboBox);
-        putHistoryInSearchField(engine, searchField, comboBox);
-
-        loading(engine, loading);
-        ajustSearchField(engine, searchField);
-        ajustTabText(engine, tab);
-        loadingFailed(engine);
-
-        return webView;
-    }
-
-
-    /**
-     * Shows alert window when Worker state of webengine is failed
-     * @param webEngine
-     */
-    private void loadingFailed(WebEngine webEngine) {
-        webEngine.getLoadWorker().stateProperty().addListener(
-                new ChangeListener<Worker.State>() {
-                    @Override
-                    public void changed(ObservableValue ov, Worker.State oldState, Worker.State newState) {
-                        if (newState == Worker.State.FAILED) {
-                            Alert alert = new Alert(Alert.AlertType.WARNING);
-                            alert.setTitle("Connection Failure");
-                            alert.setContentText("Connecting to website failed.");
-
-                            alert.showAndWait();
-                        }
-                    }
-                });
-    }
 
     public void openSatData() {
         wifiSignalAdder.closeThread(wifiSignalAdder.getScheduledExecutorService());
