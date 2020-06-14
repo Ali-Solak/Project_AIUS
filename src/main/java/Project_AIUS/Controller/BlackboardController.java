@@ -44,6 +44,7 @@ public class BlackboardController extends BaseController implements Initializabl
     private InputOutput inputOutput = new InputOutput();
     private Boolean running = true;
     private List<Integer> messageCounter = new ArrayList<>();
+    Message messi;
     @FXML
     private JFXButton home;
     @FXML

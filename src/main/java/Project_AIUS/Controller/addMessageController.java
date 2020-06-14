@@ -69,6 +69,7 @@ public class addMessageController extends BaseController implements Initializabl
             }
         }
         inputOutput.writeFile(textField.getText(),"Messages/"+filenname+".txt");
+        viewFactory.closeAddStage();
         viewFactory.openBlackboardWindow();
     }
 

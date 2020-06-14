@@ -1,0 +1,215 @@
+2020-06-14 12:45:50,522 [INFO] in scala-execution-context-global-36 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 12:45:50,522 [INFO] in scala-execution-context-global-36 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 12:45:50,523 [INFO] in scala-execution-context-global-36 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 12:45:50,523 [INFO] in scala-execution-context-global-36 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 12:45:50,523 [INFO] in scala-execution-context-global-36 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 12:45:50,523 [INFO] in scala-execution-context-global-36 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 12:45:50,582 [INFO] in scala-execution-context-global-52 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2020-06-14 12:45:50,583 [INFO] in scala-execution-context-global-52 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 12:45:50,881 [INFO] in scala-execution-context-global-52 - [info] play.api.Play - Application started (Prod)
+2020-06-14 12:45:51,486 [INFO] in scala-execution-context-global-52 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 12:45:53,308 [INFO] in scala-execution-context-global-52 - [info] c.jpro - application requested: 0!default
+2020-06-14 12:45:53,364 [INFO] in scala-execution-context-global-52 - [info] c.jpro - Creating Application: 0!default
+2020-06-14 12:45:53,466 [INFO] in scala-execution-context-global-51 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2020-06-14 12:45:53,466 [INFO] in scala-execution-context-global-51 - [info] c.jpro - host          localhost:8080
+2020-06-14 12:45:53,466 [INFO] in scala-execution-context-global-51 - [info] c.jpro - uri           /app/0!default
+2020-06-14 12:45:53,670 [INFO] in scala-execution-context-global-52 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2020-06-14 12:45:53,670 [INFO] in scala-execution-context-global-36 - java.lang.ClassNotFoundException: com.jpro.hellojpro.HelloJProFXML
+2020-06-14 12:45:53,670 [INFO] in scala-execution-context-global-36 - 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+2020-06-14 12:45:53,670 [INFO] in scala-execution-context-global-36 - 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2020-06-14 12:45:53,670 [INFO] in scala-execution-context-global-36 - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+2020-06-14 12:45:53,671 [INFO] in scala-execution-context-global-36 - 	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+2020-06-14 12:45:53,672 [INFO] in scala-execution-context-global-51 - 	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+2020-06-14 12:45:53,672 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+2020-06-14 12:45:53,672 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+2020-06-14 12:45:53,672 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+2020-06-14 12:45:53,673 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2020-06-14 12:45:53,673 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:82)
+2020-06-14 12:46:57,028 [INFO] in scala-execution-context-global-52 - [info] c.jpro - application requested: 0!default
+2020-06-14 12:46:57,033 [INFO] in scala-execution-context-global-52 - [info] c.jpro - Creating Application: 0!default
+2020-06-14 12:46:57,034 [INFO] in scala-execution-context-global-52 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2020-06-14 12:46:57,034 [INFO] in scala-execution-context-global-52 - [info] c.jpro - host          localhost:8080
+2020-06-14 12:46:57,034 [INFO] in scala-execution-context-global-52 - [info] c.jpro - uri           /app/0!default
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-52 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-52 - java.lang.ClassNotFoundException: com.jpro.hellojpro.HelloJProFXML
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-52 - 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-36 - 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-36 - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-36 - 	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-36 - 	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+2020-06-14 12:46:57,091 [INFO] in scala-execution-context-global-36 - 	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+2020-06-14 12:46:57,094 [INFO] in scala-execution-context-global-36 - 	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+2020-06-14 12:46:57,094 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+2020-06-14 12:46:57,094 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2020-06-14 12:46:57,094 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:82)
+2020-06-14 12:48:48,324 [INFO] in scala-execution-context-global-50 - [info] c.jpro - application requested: 0!default
+2020-06-14 12:48:48,331 [INFO] in scala-execution-context-global-50 - [info] c.jpro - Creating Application: 0!default
+2020-06-14 12:48:48,333 [INFO] in scala-execution-context-global-50 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2020-06-14 12:48:48,333 [INFO] in scala-execution-context-global-50 - [info] c.jpro - host          localhost:8080
+2020-06-14 12:48:48,334 [INFO] in scala-execution-context-global-50 - [info] c.jpro - uri           /app/0!default
+2020-06-14 12:48:48,374 [INFO] in scala-execution-context-global-50 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2020-06-14 12:48:48,375 [INFO] in scala-execution-context-global-50 - java.lang.ClassNotFoundException: com.jpro.hellojpro.HelloJProFXML
+2020-06-14 12:48:48,377 [INFO] in scala-execution-context-global-50 - 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+2020-06-14 12:48:48,377 [INFO] in scala-execution-context-global-50 - 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2020-06-14 12:48:48,378 [INFO] in scala-execution-context-global-50 - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+2020-06-14 12:48:48,378 [INFO] in scala-execution-context-global-50 - 	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+2020-06-14 12:48:48,378 [INFO] in scala-execution-context-global-50 - 	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+2020-06-14 12:48:48,378 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+2020-06-14 12:48:48,378 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+2020-06-14 12:48:48,378 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+2020-06-14 12:48:48,379 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2020-06-14 12:48:48,379 [INFO] in scala-execution-context-global-50 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:82)
+2020-06-14 12:50:38,909 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 12:50:38,909 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 12:50:38,910 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 12:50:38,910 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 12:50:38,910 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 12:50:38,910 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 12:50:39,109 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 12:50:38 CEST 2020
+2020-06-14 12:50:39,116 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 12:50:39,305 [INFO] in scala-execution-context-global-47 - [info] play.api.Play - Application started (Prod)
+2020-06-14 12:50:39,810 [INFO] in scala-execution-context-global-47 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 12:50:41,463 [INFO] in scala-execution-context-global-47 - [info] c.jpro - application requested: 0!default
+2020-06-14 12:50:41,536 [INFO] in scala-execution-context-global-47 - [info] c.jpro - Creating Application: 0!default
+2020-06-14 12:50:41,566 [INFO] in scala-execution-context-global-47 - [info] c.jpro - remoteAddress 127.0.0.1
+2020-06-14 12:50:41,575 [INFO] in scala-execution-context-global-47 - [info] c.jpro - host          localhost:8080
+2020-06-14 12:50:41,578 [INFO] in scala-execution-context-global-47 - [info] c.jpro - uri           /app/0!default
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - java.lang.ClassNotFoundException: com.jpro.hellojpro.HelloJProFXML
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2020-06-14 12:50:41,862 [INFO] in scala-execution-context-global-47 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:82)
+2020-06-14 13:10:34,465 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:10:34,466 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:10:34,466 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:10:34,466 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:10:34,466 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:10:34,466 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:10:34,848 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:10:34 CEST 2020
+2020-06-14 13:10:34,861 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:10:35,184 [INFO] in scala-execution-context-global-47 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:10:36,028 [INFO] in scala-execution-context-global-47 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:10:37,661 [INFO] in scala-execution-context-global-47 - [warn] c.jpro - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'
+2020-06-14 13:10:37,702 [INFO] in scala-execution-context-global-47 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:10:37,707 [INFO] in scala-execution-context-global-47 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:10:40,818 [INFO] in scala-execution-context-global-47 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:10:40,820 [INFO] in scala-execution-context-global-47 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:11:03,282 [INFO] in scala-execution-context-global-47 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:11:03,284 [INFO] in scala-execution-context-global-47 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:12:15,491 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:12:15,491 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:12:15,492 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:12:15,492 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:12:15,492 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:12:15,492 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:12:15,717 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:12:15 CEST 2020
+2020-06-14 13:12:15,722 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:12:15,910 [INFO] in scala-execution-context-global-48 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:12:16,427 [INFO] in scala-execution-context-global-48 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:12:17,334 [INFO] in scala-execution-context-global-48 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:12:17,345 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:12:53,733 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:12:53,733 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:12:53,733 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:12:53,734 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:12:53,734 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:12:53,734 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:12:53,981 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:12:53 CEST 2020
+2020-06-14 13:12:53,983 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:12:54,167 [INFO] in scala-execution-context-global-48 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:12:54,663 [INFO] in scala-execution-context-global-48 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:12:55,722 [INFO] in scala-execution-context-global-48 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:12:55,736 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:12:58,202 [INFO] in scala-execution-context-global-48 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:12:58,203 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:13:00,039 [INFO] in scala-execution-context-global-48 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:13:00,041 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:13:30,994 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:13:30,996 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:13:30,996 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:13:30,996 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:13:30,997 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:13:30,997 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:13:31,238 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:13:30 CEST 2020
+2020-06-14 13:13:31,243 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:13:31,432 [INFO] in scala-execution-context-global-48 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:13:31,934 [INFO] in scala-execution-context-global-48 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:13:32,909 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'
+2020-06-14 13:13:34,916 [INFO] in scala-execution-context-global-48 - [info] c.jpro - application requested: 0!undefined
+2020-06-14 13:13:34,927 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - The requested application "0!undefined" does not exist!
+2020-06-14 13:14:08,382 [INFO] in scala-execution-context-global-37 - [info] c.j.i.s.Initializer$ - Java version: 12.0.2
+2020-06-14 13:14:08,383 [INFO] in scala-execution-context-global-37 - [info] c.j.i.s.Initializer$ - JVM: 12.0.2 Oracle Corporation
+2020-06-14 13:14:08,383 [INFO] in scala-execution-context-global-37 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:14:08,383 [INFO] in scala-execution-context-global-37 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:14:08,383 [INFO] in scala-execution-context-global-37 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:14:08,383 [INFO] in scala-execution-context-global-37 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:14:08,383 [INFO] in scala-execution-context-global-37 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:14:08,383 [INFO] in scala-execution-context-global-37 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:14:08,644 [INFO] in scala-execution-context-global-53 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:14:08 CEST 2020
+2020-06-14 13:14:08,647 [INFO] in scala-execution-context-global-53 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:14:08,857 [INFO] in scala-execution-context-global-53 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:14:09,381 [INFO] in scala-execution-context-global-53 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:14:10,458 [INFO] in scala-execution-context-global-53 - [warn] c.jpro - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'
+2020-06-14 13:14:46,571 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:14:46,572 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:14:46,572 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:14:46,572 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:14:46,572 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:14:46,572 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:14:46,781 [INFO] in scala-execution-context-global-46 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:14:46 CEST 2020
+2020-06-14 13:14:46,784 [INFO] in scala-execution-context-global-46 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:14:46,981 [INFO] in scala-execution-context-global-46 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:14:47,489 [INFO] in scala-execution-context-global-46 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:14:48,496 [INFO] in scala-execution-context-global-46 - [warn] c.jpro - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'
+2020-06-14 13:15:28,679 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:15:28,679 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:15:28,679 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:15:28,679 [INFO] in scala-execution-context-global-33 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:15:28,680 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:15:28,680 [INFO] in scala-execution-context-global-47 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:15:28,901 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:15:28 CEST 2020
+2020-06-14 13:15:28,907 [INFO] in scala-execution-context-global-47 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:15:29,110 [INFO] in scala-execution-context-global-47 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:15:29,596 [INFO] in scala-execution-context-global-47 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:15:30,795 [INFO] in scala-execution-context-global-47 - [warn] c.jpro - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'
+2020-06-14 13:21:28,564 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:21:28,565 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:21:28,565 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:21:28,565 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:21:28,565 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:21:28,565 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:21:28,782 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:21:28 CEST 2020
+2020-06-14 13:21:28,785 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:21:29,043 [INFO] in scala-execution-context-global-48 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:21:29,585 [INFO] in scala-execution-context-global-48 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:21:30,762 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'
+2020-06-14 13:23:07,343 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:23:07,343 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:23:07,343 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:23:07,343 [INFO] in scala-execution-context-global-33 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:23:07,343 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:23:07,344 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:23:07,541 [INFO] in scala-execution-context-global-49 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:23:07 CEST 2020
+2020-06-14 13:23:07,551 [INFO] in scala-execution-context-global-49 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:23:07,733 [INFO] in scala-execution-context-global-49 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:23:08,249 [INFO] in scala-execution-context-global-49 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:25:46,194 [INFO] in scala-execution-context-global-33 - [info] c.jpro.activity - Closing the server -> used memory: 27 MB  -  free system memory: 1835 MB
+2020-06-14 13:25:46,195 [INFO] in scala-execution-context-global-33 - [info] p.c.s.AkkaHttpServer - Stopping server...
+2020-06-14 13:28:15,719 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2020-06-14 13:28:15,720 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2020-06-14 13:28:15,724 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2020-06-14 13:28:15,724 [INFO] in scala-execution-context-global-32 - Warning: Quantum will not submit render jobs, nothing should draw
+2020-06-14 13:28:15,724 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - finished init!
+2020-06-14 13:28:15,724 [INFO] in scala-execution-context-global-32 - [info] c.j.i.s.Initializer$ - JavaFX version: 11.0.3.4-jpro+0-2019-12-20-085014
+2020-06-14 13:28:15,914 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.ChartJSONImExporter - Imported chart data Sun Jun 14 13:28:15 CEST 2020
+2020-06-14 13:28:15,923 [INFO] in scala-execution-context-global-48 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2020-06-14 13:28:16,136 [INFO] in scala-execution-context-global-48 - [info] play.api.Play - Application started (Prod)
+2020-06-14 13:28:16,620 [INFO] in scala-execution-context-global-48 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2020-06-14 13:28:17,549 [INFO] in scala-execution-context-global-48 - [warn] c.jpro - jpro.plainFile - Couldn't get resource for: 'jpro/html/favicon.ico'

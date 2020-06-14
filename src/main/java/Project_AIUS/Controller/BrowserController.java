@@ -46,7 +46,7 @@ import static javafx.concurrent.Worker.State.FAILED;
 
 
 /**
- * Window utilises Javafx webview to create a Browser
+ * View for Browser
  */
 public class BrowserController extends BaseController implements Initializable {
 

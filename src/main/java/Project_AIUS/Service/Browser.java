@@ -20,21 +20,8 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.paint.Color;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-import org.kordamp.ikonli.javafx.FontIcon;
-import org.kordamp.ikonli.javafx.StackedFontIcon;
-
-import java.awt.*;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 
 
 /**

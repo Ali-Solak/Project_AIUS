@@ -17,11 +17,14 @@ public class ViewFactory {
 
 
     private Stage stage;
+    private Stage stage1;
     private ColorTheme colorTheme = ColorTheme.DARK;
     private FontSize fontSize = FontSize.MEDIUM;
 
     public ViewFactory() {
         stage = new Stage();
+        stage1 = new Stage();
+        stage1.initStyle(StageStyle.UTILITY);
         stage.initStyle(StageStyle.UNDECORATED);
     }
 
@@ -98,10 +101,12 @@ public class ViewFactory {
             return;
         }
         Scene scene = new Scene(parent);
-        Stage stage = new Stage();
-        stage.initStyle(StageStyle.UTILITY);
-        stage.setScene(scene);
-        stage.show();
+        stage1.setScene(scene);
+        stage1.show();
+    }
+
+    public void closeAddStage(){
+        stage1.close();
     }
 
 
